@@ -1,0 +1,86 @@
+#!/bin/bash
+
+# https://stackoverflow.com/questions/14170590/building-qt-5-on-linux-for-windows
+# https://github.com/mxe/mxe/issues/2561
+
+# cd /opt
+# sudo mkdir mxe2
+# sudo chown $USER mxe2
+# git clone https://github.com/mxe/mxe.git mxe2
+# sudo apt-get install autoconf automake autopoint bash bison bzip2 flex gettext git g++ gperf intltool libffi-dev libgdk-pixbuf2.0-dev libtool libltdl-dev libssl-dev libxml-parser-perl make openssl p7zip-full patch perl pkg-config python ruby scons sed unzip wget xz-utils g++-multilib libc6-dev-i386 libtool-bin lzip python-mako
+# cd mxe2
+# make qtbase
+# make qtserialport
+# make qtconnectivity
+# make qtquickcontrols
+# make qtquickcontrols2
+# make qtserialbus
+# make qtlocation
+# make qtgamepad
+# make qtgraphicaleffects
+
+set -e
+
+export PATH=/opt/mxe2/usr/bin/:$PATH
+rm -rf build/win/*
+
+# Original
+/opt/mxe2/usr/bin/i686-w64-mingw32.static-qmake-qt5 -config release "CONFIG+=release_win build_original"
+make clean
+make -j8
+rm -rf build/win/obj
+cd build/win
+zip vesc_tool_original_windows.zip vesc_tool*.exe
+ls | grep -v '\.zip$' | xargs rm
+cd ../..
+
+# Platinum
+/opt/mxe2/usr/bin/i686-w64-mingw32.static-qmake-qt5 -config release "CONFIG+=release_win build_platinum"
+make clean
+make -j8
+rm -rf build/win/obj
+cd build/win
+zip vesc_tool_platinum_windows.zip vesc_tool*.exe
+ls | grep -v '\.zip$' | xargs rm
+cd ../..
+
+# Gold
+/opt/mxe2/usr/bin/i686-w64-mingw32.static-qmake-qt5 -config release "CONFIG+=release_win build_gold"
+make clean
+make -j8
+rm -rf build/win/obj
+cd build/win
+zip vesc_tool_gold_windows.zip vesc_tool*.exe
+ls | grep -v '\.zip$' | xargs rm
+cd ../..
+
+# Silver
+/opt/mxe2/usr/bin/i686-w64-mingw32.static-qmake-qt5 -config release "CONFIG+=release_win build_silver"
+make clean
+make -j8
+rm -rf build/win/obj
+cd build/win
+zip vesc_tool_silver_windows.zip vesc_tool*.exe
+ls | grep -v '\.zip$' | xargs rm
+cd ../..
+
+# Bronze
+/opt/mxe2/usr/bin/i686-w64-mingw32.static-qmake-qt5 -config release "CONFIG+=release_win build_bronze"
+make clean
+make -j8
+rm -rf build/win/obj
+cd build/win
+zip vesc_tool_bronze_windows.zip vesc_tool*.exe
+ls | grep -v '\.zip$' | xargs rm
+cd ../..
+
+# Free of charge
+/opt/mxe2/usr/bin/i686-w64-mingw32.static-qmake-qt5 -config release "CONFIG+=release_win build_free"
+make clean
+make -j8
+rm -rf build/win/obj
+cd build/win
+zip vesc_tool_free_windows.zip vesc_tool*.exe
+ls | grep -v '\.zip$' | xargs rm
+cd ../..
+
