@@ -110,12 +110,6 @@ private slots:
     void on_actionExit_triggered();
     void on_actionAbout_triggered();
     void on_actionLibrariesUsed_triggered();
-    void on_dutyButton_clicked();
-    void on_currentButton_clicked();
-    void on_speedButton_clicked();
-    void on_posButton_clicked();
-    void on_brakeCurrentButton_clicked();
-    void on_handbrakeButton_clicked();
     void on_pageList_currentRowChanged(int currentRow);
     void on_actionParameterEditorMcconf_triggered();
     void on_actionParameterEditorAppconf_triggered();
@@ -150,6 +144,17 @@ private slots:
     void on_canList_currentRowChanged(int currentRow);
     void on_actionGamepadControl_triggered(bool checked);   
     void on_actionPreferences_triggered();
+    void on_rtDataButton_clicked();
+    void on_rtDataAppButton_clicked();
+    void on_sendAliveButton_clicked();
+    void on_reconnectButton_clicked();
+    void on_disconnectButton_clicked();
+    void on_readMcconfButton_clicked();
+    void on_readMcconfDefaultButton_clicked();
+    void on_writeMcconfButton_clicked();
+    void on_readAppconfButton_clicked();
+    void on_readAppconfDefaultButton_clicked();
+    void on_writeAppconfButton_clicked();
 
 private:
     Ui::MainWindow *ui;

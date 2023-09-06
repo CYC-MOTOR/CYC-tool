@@ -40,31 +40,13 @@ PageConnection::PageConnection(QWidget *parent) :
     mTimer->start(20);
 
     QString theme = Utility::getThemePath();
-    ui->CANbusScanButton->setIcon(QPixmap(theme + "icons/Refresh-96.png"));
-    ui->canRefreshButton->setIcon(QPixmap(theme + "icons/Refresh-96.png"));
-    ui->CANbusConnectButton->setIcon(QPixmap(theme + "icons/Connected-96.png"));
-    ui->CANbusDisconnectButton->setIcon(QPixmap(theme + "icons/Disconnected-96.png"));
-    ui->tcpConnectButton->setIcon(QPixmap(theme + "icons/Connected-96.png"));
-    ui->tcpDisconnectButton->setIcon(QPixmap(theme + "icons/Disconnected-96.png"));
-    ui->udpConnectButton->setIcon(QPixmap(theme + "icons/Connected-96.png"));
-    ui->udpDisconnectButton->setIcon(QPixmap(theme + "icons/Disconnected-96.png"));
-    ui->serialRefreshButton->setIcon(QPixmap(theme + "icons/Refresh-96.png"));
-    ui->serialConnectButton->setIcon(QPixmap(theme + "icons/Connected-96.png"));
-    ui->serialDisconnectButton->setIcon(QPixmap(theme + "icons/Disconnected-96.png"));
-    ui->bleConnectButton->setIcon(QPixmap(theme + "icons/Connected-96.png"));
-    ui->bleDisconnectButton->setIcon(QPixmap(theme + "icons/Disconnected-96.png"));
-    ui->bleScanButton->setIcon(QPixmap(theme + "icons/Refresh-96.png"));
-    ui->CANbusScanButton->setIcon(QPixmap(theme + "icons/Refresh-96.png"));
-    ui->addConnectedButton->setIcon(QPixmap(theme + "icons/Plus Math-96.png"));
-    ui->addUuidButton->setIcon(QPixmap(theme + "icons/Plus Math-96.png"));
-    ui->unpairButton->setIcon(QPixmap(theme + "icons/Restart-96.png"));
-    ui->deletePairedButton->setIcon(QPixmap(theme + "icons/Delete-96.png"));
-    ui->clearPairedButton->setIcon(QPixmap(theme + "icons/Delete-96.png"));
-    ui->canDefaultButton->setIcon(QPixmap(theme + "icons/Bug-96.png"));
+    ui->canRefreshButton->setIcon(QIcon());
+    ui->serialRefreshButton->setIcon(QIcon());
+    ui->serialConnectButton->setIcon(QIcon());
+    ui->serialDisconnectButton->setIcon(QIcon());
+    ui->canDefaultButton->setIcon(QIcon());
     ui->helpButton->setIcon(QPixmap(theme + "icons/Help-96.png"));
-    ui->autoConnectButton->setIcon(QPixmap(theme + "icons/Wizard-96.png"));
-    ui->bleSetNameButton->setIcon(QPixmap(theme + "icons/Ok-96.png"));
-    ui->pairConnectedButton->setIcon(QPixmap(theme + "icons/Circled Play-96.png"));
+    ui->autoConnectButton->setIcon(QIcon());
 
     QIcon mycon = QIcon(theme + "icons/can_off.png");
     mycon.addPixmap(QPixmap(theme + "icons/can_off.png"), QIcon::Normal, QIcon::Off);
@@ -85,12 +67,6 @@ VescInterface *PageConnection::vesc() const
 void PageConnection::setVesc(VescInterface *vesc)
 {
     mVesc = vesc;
-
-    ui->tcpServerEdit->setText(mVesc->getLastTcpServer());
-    ui->tcpPortBox->setValue(mVesc->getLastTcpPort());
-
-    ui->udpServerEdit->setText(mVesc->getLastUdpServer());
-    ui->udpPortBox->setValue(mVesc->getLastUdpPort());
 
 #ifdef HAS_BLUETOOTH
     connect(mVesc->bleDevice(), SIGNAL(scanDone(QVariantMap,bool)),
@@ -136,127 +112,7 @@ void PageConnection::setVesc(VescInterface *vesc)
             this, SLOT(CANbusNewNode(int)));
     connect(mVesc, SIGNAL(CANbusInterfaceListUpdated()),
             this, SLOT(CANbusInterfaceListUpdated()));
-    connect(mVesc, SIGNAL(pairingListUpdated()),
-            this, SLOT(pairingListUpdated()));
-
-    pairingListUpdated();
     on_serialRefreshButton_clicked();
-}
-
-void PageConnection::timerSlot()
-{
-    if (mVesc) {
-        QString str = mVesc->getConnectedPortName();
-        if (str != ui->statusLabel->text()) {
-            ui->statusLabel->setText(mVesc->getConnectedPortName());
-        }
-
-        // CAN fwd
-        if (ui->canFwdButton->isChecked() != mVesc->commands()->getSendCan()) {
-            ui->canFwdButton->setChecked(mVesc->commands()->getSendCan());
-        }
-
-        if (ui->canFwdBox->count() > 0) {
-            int canVal = ui->canFwdBox->currentData().toInt();
-            if (canVal != mVesc->commands()->getCanSendId()) {
-                for (int i = 0;i < ui->canFwdBox->count();i++) {
-                    if (ui->canFwdBox->itemData(i).toInt() == canVal) {
-                        ui->canFwdBox->setCurrentIndex(i);
-                        break;
-                    }
-                }
-            }
-        }
-    }
-
-    QString tcpIpTxt = "Server IPs\n";
-    QString tcpClientTxt = "Connected Clients\n";
-    if (mVesc->tcpServerIsRunning()) {
-        for (auto adr: Utility::getNetworkAddresses()) {
-            tcpIpTxt += adr.toString() + "\n";
-        }
-
-        if (mVesc->tcpServerIsClientConnected()) {
-            tcpClientTxt += mVesc->tcpServerClientIp();
-        }
-    }
-    else {
-        ui->tcpServerPortBox->setEnabled(true);
-    }
-
-    if (ui->tcpServerAddressesEdit->toPlainText() != tcpIpTxt) {
-        ui->tcpServerAddressesEdit->setPlainText(tcpIpTxt);
-    }
-
-    if (ui->tcpServerClientsEdit->toPlainText() != tcpClientTxt) {
-        ui->tcpServerClientsEdit->setPlainText(tcpClientTxt);
-    }
-
-    QString udpIpTxt = "Server IPs\n";
-    QString udpClientTxt = "Connected Clients\n";
-    if(mVesc->udpServerIsRunning()) {
-        for (auto adr: Utility::getNetworkAddresses()) {
-            udpIpTxt += adr.toString() + "\n";
-        }
-
-        if (mVesc->udpServerIsClientConnected()) {
-            udpClientTxt += mVesc->udpServerClientIp();
-        }
-    }
-    else {
-        ui->udpServerPortBox->setEnabled(true);
-    }
-
-    if (ui->udpServerAddressesEdit->toPlainText() != udpIpTxt) {
-        ui->udpServerAddressesEdit->setPlainText(udpIpTxt);
-    }
-
-    if (ui->udpServerClientsEdit->toPlainText() != udpClientTxt) {
-        ui->udpServerClientsEdit->setPlainText(udpClientTxt);
-    }
-}
-
-void PageConnection::bleScanDone(QVariantMap devs, bool done)
-{
-#ifdef HAS_BLUETOOTH
-    if (done) {
-        ui->bleScanButton->setEnabled(true);
-    }
-
-    ui->bleDevBox->clear();
-    for (auto d: devs.keys()) {
-        QString devName = devs.value(d).toString();
-        QString addr = d;
-        QString setName = mVesc->getBleName(addr);
-
-        if (!setName.isEmpty()) {
-            QString name;
-            name += setName;
-            name += " [";
-            name += addr;
-            name += "]";
-            ui->bleDevBox->insertItem(0, name, addr);
-        } else if (devName.contains("VESC")) {
-            QString name;
-            name += devName;
-            name += " [";
-            name += addr;
-            name += "]";
-            ui->bleDevBox->insertItem(0, name, addr);
-        } else {
-            QString name;
-            name += devName;
-            name += " [";
-            name += addr;
-            name += "]";
-            ui->bleDevBox->addItem(name, addr);
-        }
-    }
-    ui->bleDevBox->setCurrentIndex(0);
-#else
-    (void)devs;
-    (void)done;
-#endif
 }
 
 void PageConnection::pingCanRx(QVector<int> devs, bool isTimeout)
@@ -272,36 +128,12 @@ void PageConnection::pingCanRx(QVector<int> devs, bool isTimeout)
 
 void PageConnection::CANbusNewNode(int node)
 {
-    ui->CANbusTargetIdBox->addItem(QString::number(node), QString::number(node));
+
 }
 
 void PageConnection::CANbusInterfaceListUpdated()
 {
-    ui->CANbusInterfaceBox->clear();
-    QList<QString> interfaces = mVesc->listCANbusInterfaces();
 
-    for(int i = 0; i<interfaces.size(); i++) {
-        ui->CANbusInterfaceBox->addItem(interfaces.at(i), interfaces.at(i));
-    }
-
-    ui->CANbusInterfaceBox->setCurrentIndex(0);
-}
-
-void PageConnection::pairingListUpdated()
-{
-    ui->pairedListWidget->clear();
-
-    for (QString uuid: mVesc->getPairedUuids()) {
-        QListWidgetItem *item = new QListWidgetItem;
-        item->setText("UUID: " + uuid);
-        item->setIcon(QIcon("://res/icon.svg"));
-        item->setData(Qt::UserRole, uuid);
-        ui->pairedListWidget->addItem(item);
-    }
-
-    if (ui->pairedListWidget->count() > 0) {
-        ui->pairedListWidget->setCurrentRow(0);
-    }
 }
 
 void PageConnection::on_serialRefreshButton_clicked()
@@ -333,15 +165,7 @@ void PageConnection::on_serialConnectButton_clicked()
 
 void PageConnection::on_CANbusScanButton_clicked()
 {
-    if (mVesc) {
-        ui->CANbusScanButton->setEnabled(false);
-        mVesc->connectCANbus("socketcan", ui->CANbusInterfaceBox->currentData().toString(),
-                             ui->CANbusBitrateBox->value());
 
-        ui->CANbusTargetIdBox->clear();
-        mVesc->scanCANbus();
-        ui->CANbusScanButton->setEnabled(true);
-    }
 }
 
 void PageConnection::on_CANbusDisconnectButton_clicked()
@@ -353,43 +177,7 @@ void PageConnection::on_CANbusDisconnectButton_clicked()
 
 void PageConnection::on_CANbusConnectButton_clicked()
 {
-    if (mVesc) {
-        mVesc->setCANbusReceiverID(ui->CANbusTargetIdBox->currentData().toInt());
-        mVesc->connectCANbus("socketcan", ui->CANbusInterfaceBox->currentData().toString(),
-                             ui->CANbusBitrateBox->value());
-    }
-}
 
-void PageConnection::on_tcpDisconnectButton_clicked()
-{
-    if (mVesc) {
-        mVesc->disconnectPort();
-    }
-}
-
-void PageConnection::on_udpDisconnectButton_clicked()
-{
-    if (mVesc) {
-        mVesc->disconnectPort();
-    }
-}
-
-void PageConnection::on_tcpConnectButton_clicked()
-{
-    if (mVesc) {
-        QString tcpServer = ui->tcpServerEdit->text();
-        int tcpPort = ui->tcpPortBox->value();
-        mVesc->connectTcp(tcpServer, tcpPort);
-    }
-}
-
-void PageConnection::on_udpConnectButton_clicked()
-{
-    if (mVesc) {
-        QString udpServer = ui->udpServerEdit->text();
-        int udpPort = ui->udpPortBox->value();
-        mVesc->connectUdp(udpServer, udpPort);
-    }
 }
 
 void PageConnection::on_helpButton_clicked()
@@ -416,52 +204,6 @@ void PageConnection::on_canFwdButton_toggled(bool checked)
 void PageConnection::on_autoConnectButton_clicked()
 {
     Utility::autoconnectBlockingWithProgress(mVesc, this);
-}
-
-void PageConnection::on_bleScanButton_clicked()
-{
-#ifdef HAS_BLUETOOTH
-    if (mVesc) {
-        mVesc->bleDevice()->startScan();
-        ui->bleScanButton->setEnabled(false);
-    }
-#endif
-}
-
-void PageConnection::on_bleDisconnectButton_clicked()
-{
-    if (mVesc) {
-        mVesc->disconnectPort();
-    }
-}
-
-void PageConnection::on_bleConnectButton_clicked()
-{
-    if (mVesc) {
-        if (ui->bleDevBox->count() > 0) {
-            mVesc->connectBle(ui->bleDevBox->currentData().toString());
-        }
-    }
-}
-
-void PageConnection::on_bleSetNameButton_clicked()
-{
-#ifdef HAS_BLUETOOTH
-    if (mVesc) {
-        QString name = ui->bleNameEdit->text();
-        QString addr = ui->bleDevBox->currentData().toString();
-
-        if (!name.isEmpty()) {
-            mVesc->storeBleName(addr, name);
-            name += " [";
-            name += addr;
-            name += "]";
-            ui->bleDevBox->removeItem(0);
-            ui->bleDevBox->insertItem(0, name, addr);
-            ui->bleDevBox->setCurrentIndex(0);
-        }
-    }
-#endif
 }
 
 void PageConnection::on_canFwdBox_currentIndexChanged(const QString &arg1)
@@ -538,46 +280,6 @@ void PageConnection::on_addConnectedButton_clicked()
     }
 }
 
-void PageConnection::on_deletePairedButton_clicked()
-{
-    if (mVesc) {
-        QListWidgetItem *item = ui->pairedListWidget->currentItem();
-
-        if (item) {
-            QMessageBox::StandardButton reply;
-            reply = QMessageBox::warning(this,
-                                         tr("Delete paired VESC"),
-                                         tr("This is going to delete this VESC from the paired list. If that VESC "
-                                            "has the pairing flag set you won't be able to connect to it over BLE "
-                                            "any more. Are you sure?"),
-                                         QMessageBox::Ok | QMessageBox::Cancel);
-            if (reply == QMessageBox::Ok) {
-                mVesc->deletePairedUuid(item->data(Qt::UserRole).toString());
-                mVesc->storeSettings();
-            }
-        }
-    }
-}
-
-void PageConnection::on_clearPairedButton_clicked()
-{
-    if (mVesc) {
-        QListWidgetItem *item = ui->pairedListWidget->currentItem();
-
-        if (item) {
-            QMessageBox::StandardButton reply;
-            reply = QMessageBox::warning(this,
-                                         tr("Clear paired VESCs"),
-                                         tr("This is going to clear the pairing list of this instance of VESC Tool. Are you sure?"),
-                                         QMessageBox::Ok | QMessageBox::Cancel);
-            if (reply == QMessageBox::Ok) {
-                mVesc->clearPairedUuids();
-                mVesc->storeSettings();
-            }
-        }
-    }
-}
-
 void PageConnection::on_addUuidButton_clicked()
 {
     if (mVesc) {
@@ -588,71 +290,6 @@ void PageConnection::on_addUuidButton_clicked()
         if (ok) {
             mVesc->addPairedUuid(text);
             mVesc->storeSettings();
-        }
-    }
-}
-
-void PageConnection::on_unpairButton_clicked()
-{
-    if (mVesc) {
-        if (mVesc->isPortConnected()) {
-            if (mVesc->commands()->isLimitedMode()) {
-                mVesc->emitMessageDialog("Unpair VESC",
-                                         "The fiwmare must be updated on this VESC first.",
-                                         false, false);
-            } else {
-                QListWidgetItem *item = ui->pairedListWidget->currentItem();
-
-                if (item) {
-                    QMessageBox::StandardButton reply;
-                    reply = QMessageBox::warning(this,
-                                                 tr("Unpair connected VESC"),
-                                                 tr("This is going to unpair the connected VESC. Continue?"),
-                                                 QMessageBox::Ok | QMessageBox::Cancel);
-                    if (reply == QMessageBox::Ok) {
-                        ConfigParams *ap = mVesc->appConfig();
-                        mVesc->commands()->getAppConf();
-                        bool res = Utility::waitSignal(ap, SIGNAL(updated()), 1500);
-
-                        if (res) {
-                            mVesc->appConfig()->updateParamBool("pairing_done", false, nullptr);
-                            mVesc->commands()->setAppConf();
-                            mVesc->deletePairedUuid(mVesc->getConnectedUuid());
-                            mVesc->storeSettings();
-                        }
-                    }
-                }
-            }
-        } else {
-            mVesc->emitMessageDialog("Unpair VESC",
-                                     "You are not connected to the VESC. Connect in order to unpair it.",
-                                     false, false);
-        }
-    }
-}
-
-void PageConnection::on_tcpServerEnableBox_toggled(bool isEnabled)
-{
-    if (mVesc) {
-        if (isEnabled)
-        {
-            mVesc->tcpServerStart(ui->tcpServerPortBox->value());
-            ui->tcpServerPortBox->setEnabled(false);
-        } else {
-            mVesc->tcpServerStop();
-        }
-    }
-}
-
-void PageConnection::on_udpServerEnableBox_toggled(bool isEnabled)
-{
-    if (mVesc) {
-        if (isEnabled)
-        {
-            mVesc->udpServerStart(ui->udpServerPortBox->value());
-            ui->udpServerPortBox->setEnabled(false);
-        } else {
-           mVesc->udpServerStop();
         }
     }
 }

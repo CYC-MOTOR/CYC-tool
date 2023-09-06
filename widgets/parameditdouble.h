@@ -24,6 +24,8 @@
 #include <QHBoxLayout>
 #include <QDoubleSpinBox>
 #include <QSpinBox>
+#include <QSlider>
+#include <QDebug>
 #include "configparams.h"
 #include "displaypercentage.h"
 
@@ -60,13 +62,15 @@ private:
     ConfigParams *mConfig;
     ConfigParam mParam;
     QString mName;
-    double mMaxVal;
+    double min;
+    double max;
+    double steps;
 
-    DisplayPercentage *mDisplay;
     QDoubleSpinBox *mDoubleBox;
-    QSpinBox *mPercentageBox;
+    QSlider *mSlider;
 
-    void updateDisplay(double val);
+    int doubleToPercentage(double val);
+    double percentageToDouble(int p);
 
 };
 

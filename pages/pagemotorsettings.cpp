@@ -32,7 +32,7 @@ PageMotorSettings::PageMotorSettings(QWidget *parent) :
     mVesc = nullptr;
 
     QString theme = Utility::getThemePath();
-    ui->motorSetupWizardButton->setIcon(QPixmap(theme + "icons/Wizard-96.png"));
+    ui->motorSetupWizardButton->setIcon(QIcon());
 }
 
 PageMotorSettings::~PageMotorSettings()

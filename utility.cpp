@@ -226,7 +226,7 @@ QString Utility::vescToolChangeLog()
 
 QString Utility::aboutText()
 {
-    return tr("<b>VESC® Tool %1</b><br>"
+    return tr("<b>EBMX Tool %1</b><br>"
           #if VT_IS_TEST_VERSION
               "Test Version %2<br>"
           #endif
@@ -243,9 +243,9 @@ QString Utility::aboutText()
           #elif defined(VER_FREE)
               "Free of Charge Version<br>"
           #endif
-              "&copy; Benjamin Vedder 2016 - 2021<br>"
-              "<a href=\"mailto:benjamin@vedder.se\">benjamin@vedder.se</a><br>"
-              "<a href=\"https://vesc-project.com/\">https://vesc-project.com/</a>").
+              "EBMX 2023<br>"
+              "<a href=\"mailto:sales@ebmx.com.au\">sales@ebmx.com.au</a><br>"
+              "<a href=\"https://ebmx.com.au//\">Website</a>").
             arg(QString::number(VT_VERSION, 'f', 2))
         #if VT_IS_TEST_VERSION
             .arg(QString::number(VT_IS_TEST_VERSION))

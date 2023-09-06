@@ -2,9 +2,9 @@ import QtQuick 2.5
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
-import Vedder.vesc.utility 1.0
-import Vedder.vesc.commands 1.0
-import Vedder.vesc.configparams 1.0
+import Vedder.EBMX.utility 1.0
+import Vedder.EBMX.commands 1.0
+import Vedder.EBMX.configparams 1.0
 
 Item {
     id: topComponent
@@ -12,9 +12,9 @@ Item {
     anchors.fill: parent
     anchors.margins: 10
     
-    property Commands mCommands: VescIf.commands()
-    property ConfigParams mMcConf: VescIf.mcConfig()
-    property ConfigParams mAppConf: VescIf.appConfig()
+    property Commands mCommands: EBMXIf.commands()
+    property ConfigParams mMcConf: EBMXIf.mcConfig()
+    property ConfigParams mAppConf: EBMXIf.appConfig()
     property bool isHorizontal: width > height
     
     property bool motor_running: false
@@ -58,7 +58,7 @@ Item {
             color: "White"
             horizontalAlignment: Text.AlignHCenter
             font.pointSize: 20
-            text: "MMX VESC UI"
+            text: "MMX EBMX UI"
         }
         
         GridLayout {

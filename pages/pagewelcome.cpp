@@ -37,7 +37,7 @@ PageWelcome::PageWelcome(QWidget *parent) :
     ui->setupUi(this);
 
     QString theme = Utility::getThemePath();
-    ui->autoConnectButton->setIcon(QIcon(theme + "icons/Connected-96.png"));
+    ui->autoConnectButton->setIcon(QIcon());
    // ui->wizardFocSimpleButton->setIcon(QIcon(theme + "icons/Wizard-96.png"));
    // ui->wizardAppButton->setIcon(QIcon(theme + "icons/Wizard-96.png"));
    // ui->nrfPairButton->setIcon(QIcon(theme + "icons/icons8-fantasy-96.png"));
@@ -46,7 +46,7 @@ PageWelcome::PageWelcome(QWidget *parent) :
 
     layout()->setContentsMargins(0, 0, 0, 0);
     mVesc = nullptr;
-    ui->bgWidget->setPixmap(QPixmap("://res/bg.png"));
+    ui->bgWidget->setPixmap(QPixmap());
 
   /*  connect(ui->wizardFocSimpleButton, &QPushButton::clicked, [this]() {
         QMetaObject::invokeMethod(ui->qmlWidget->rootObject(), "setupMotors");
@@ -107,12 +107,6 @@ VescInterface *PageWelcome::vesc() const
 void PageWelcome::setVesc(VescInterface *vesc)
 {
     mVesc = vesc;
-
-    ui->qmlWidget->engine()->rootContext()->setContextProperty("VescIf", mVesc);
-    ui->qmlWidget->engine()->rootContext()->setContextProperty("QmlUi", this);
-    ui->qmlWidget->engine()->rootContext()->setContextProperty("Utility", &mUtil);
-
-    ui->qmlWidget->setSource(QUrl(QLatin1String("qrc:/res/qml/WelcomeQmlPanel.qml")));
 }
 
 void PageWelcome::on_autoConnectButton_clicked()
@@ -122,5 +116,5 @@ void PageWelcome::on_autoConnectButton_clicked()
 
 void PageWelcome::on_nrfPairButton_clicked()
 {
-    QMetaObject::invokeMethod(ui->qmlWidget->rootObject(), "nrfQuickPair");
+
 }

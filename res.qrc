@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/">
+        <file>res/logo.png</file>
         <file>res/bg.png</file>
         <file>res/images/rc_rx.jpg</file>
         <file>res/images/ebike_throttle.jpg</file>
@@ -56,6 +57,7 @@
         <file>res/images/12s7p_pcb.png</file>
         <file>res/images/esk8.jpg</file>
         <file>res/images/propeller.jpg</file>
+        <file>res/+theme_light/logo.png</file>
         <file>res/+theme_light/logo_vertical.png</file>
         <file>res/icons/bluetooth.png</file>
         <file>res/icons/minimize.png</file>

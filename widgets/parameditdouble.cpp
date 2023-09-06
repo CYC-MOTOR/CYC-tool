@@ -36,29 +36,25 @@ ParamEditDouble::ParamEditDouble(QWidget *parent) :
     ui->readDefaultButton->setIcon(QPixmap(theme + "icons/Data Backup-96.png"));
 
     mConfig = 0;
-    mMaxVal = 1.0;
 
-    mDisplay = new DisplayPercentage(this);
+    min = 0;
+    max = 0;
+    steps = 100;
+
     mDoubleBox = new QDoubleSpinBox(this);
-    mPercentageBox = new QSpinBox(this);
+    mSlider = new QSlider(Qt::Horizontal, this);
 
-    mPercentageBox->setSuffix(" %");
-
-    ui->mainLayout->insertWidget(0, mDisplay);
+    ui->mainLayout->insertWidget(0, mSlider);
     ui->mainLayout->insertWidget(0, mDoubleBox);
-    ui->mainLayout->insertWidget(0, mPercentageBox);
+    
 
     ui->mainLayout->setStretchFactor(mDoubleBox, 1);
-    ui->mainLayout->setStretchFactor(mPercentageBox, 1);
-    ui->mainLayout->setStretchFactor(mDisplay, 10);
+    ui->mainLayout->setStretchFactor(mSlider, 10);
 
-    mPercentageBox->setVisible(false);
-    mDisplay->setVisible(false);
-
-    connect(mPercentageBox, SIGNAL(valueChanged(int)),
-            this, SLOT(percentageChanged(int)));
     connect(mDoubleBox, SIGNAL(valueChanged(double)),
             this, SLOT(doubleChanged(double)));
+    connect(mSlider, SIGNAL(valueChanged(int)),
+            this, SLOT(percentageChanged(int)));
 }
 
 ParamEditDouble::~ParamEditDouble()
@@ -78,24 +74,20 @@ void ParamEditDouble::setConfig(ConfigParams *config)
 
         mParam = *param;
 
-        mMaxVal = fabs(mParam.maxDouble) > fabs(mParam.minDouble) ?
-                    fabs(mParam.maxDouble) : fabs(mParam.minDouble);
+        min = mParam.minDouble;
+        max = mParam.maxDouble;
+        steps = (max - min) * mParam.editorScale * qPow(10, mDoubleBox->decimals());
 
         mDoubleBox->setMaximum(mParam.maxDouble * mParam.editorScale);
         mDoubleBox->setMinimum(mParam.minDouble * mParam.editorScale);
         mDoubleBox->setSingleStep(mParam.stepDouble);
         mDoubleBox->setValue(mParam.valDouble * mParam.editorScale);
 
-        int p = (mParam.valDouble * 100.0) / mMaxVal;
-        mPercentageBox->setMaximum((100.0 * mParam.maxDouble) / mMaxVal);
-        mPercentageBox->setMinimum((100.0 * mParam.minDouble) / mMaxVal);
-        mPercentageBox->setValue(p);
-        mDisplay->setDual(mParam.minDouble < 0.0 && mParam.maxDouble > 0.0);
-
-        // Rounding...
-        if (!mParam.editAsPercentage) {
-            updateDisplay(mParam.valDouble);
-        }
+        
+        mSlider->setMaximum(steps);
+        mSlider->setMinimum(0);
+        mSlider->setSingleStep(1);
+        mSlider->setValue(doubleToPercentage(mParam.valDouble));
     }
 
     connect(mConfig, SIGNAL(paramChangedDouble(QObject*,QString,double)),
@@ -124,54 +116,48 @@ void ParamEditDouble::setDecimals(int decimals)
 
 void ParamEditDouble::setShowAsPercentage(bool showAsPercentage)
 {
-    mDoubleBox->setVisible(!showAsPercentage);
-    mPercentageBox->setVisible(showAsPercentage);
+    mDoubleBox->setVisible(true);
 }
 
 void ParamEditDouble::showDisplay(bool show)
 {
-    mDisplay->setVisible(show);
+    
 }
 
 void ParamEditDouble::paramChangedDouble(QObject *src, QString name, double newParam)
 {
     if (src != this && name == mName) {
-        mPercentageBox->setValue(round((100.0 * newParam) / mMaxVal));
         mDoubleBox->setValue(newParam * mParam.editorScale);
-        updateDisplay(newParam);
+        mSlider->setValue(doubleToPercentage(newParam));
     }
 }
 
 void ParamEditDouble::percentageChanged(int p)
 {
-    if (mParam.editAsPercentage) {
-        double val = ((double)p / 100.0) * mMaxVal;
+    double val = percentageToDouble(p);
 
-        if (mConfig) {
-            if (mConfig->getUpdateOnly() != mName) {
-                mConfig->setUpdateOnly("");
-            }
-            mConfig->updateParamDouble(mName, val, this);
+    if (mConfig) {
+        if (mConfig->getUpdateOnly() != mName) {
+            mConfig->setUpdateOnly("");
         }
-
-        updateDisplay(val);
+        mConfig->updateParamDouble(mName, val, this);
     }
+    //qDebug() << "Step: " << p << ", " << val * mParam.editorScale;
+    mDoubleBox->setValue(val * mParam.editorScale);
 }
 
 void ParamEditDouble::doubleChanged(double d)
 {
-    if (!mParam.editAsPercentage) {
-        double val = d / mParam.editorScale;
+    double val = d / mParam.editorScale;
 
-        if (mConfig) {
-            if (mConfig->getUpdateOnly() != mName) {
-                mConfig->setUpdateOnly("");
-            }
-            mConfig->updateParamDouble(mName, val, this);
+    if (mConfig) {
+        if (mConfig->getUpdateOnly() != mName) {
+            mConfig->setUpdateOnly("");
         }
-
-        updateDisplay(val);
+        mConfig->updateParamDouble(mName, val, this);
     }
+    //qDebug() << d << ", Step: " << doubleToPercentage(val);
+    mSlider->setValue(doubleToPercentage(val));
 }
 
 void ParamEditDouble::on_readButton_clicked()
@@ -197,11 +183,15 @@ void ParamEditDouble::on_helpButton_clicked()
     }
 }
 
-void ParamEditDouble::updateDisplay(double val)
+int ParamEditDouble::doubleToPercentage(double val)
 {
-    double p = (100.0 * val) / mMaxVal;
-    mDisplay->setValue(p);
-    mDisplay->setText(tr("%1%2").
-                      arg(val * mParam.editorScale, 0, 'f', mParam.editorDecimalsDouble).
-                      arg(mParam.suffix));
+    double total = max - min;
+    double newVal = min < 0 ? val + fabs(min) : val - min;
+    return round(newVal / total * steps);
+}
+
+double ParamEditDouble::percentageToDouble(int p)
+{
+    double total = max - min;
+    return min + total * ((double)p / steps);
 }

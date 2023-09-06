@@ -30,6 +30,7 @@ QT_LOGGING_RULES="qt.qml.connections=false"
 
 CONFIG += c++11
 CONFIG += resources_big
+CONFIG += static
 ios: {
     QMAKE_CXXFLAGS_DEBUG += -Wall
 }
@@ -121,13 +122,13 @@ contains(DEFINES, HAS_GAMEPAD) {
 android: QT += androidextras
 
 ios | macx: {
-    TARGET = "VESC Tool"
+    TARGET = "EBMX Tool"
 }else: {
     android:{
-        TARGET = "vesc_tool"
+        TARGET = "ebmx_tool"
     }else:{
 
-        TARGET = vesc_tool_$$VT_VERSION
+        TARGET = ebmx_tool
     }
 }
 

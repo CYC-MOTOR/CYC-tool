@@ -22,10 +22,6 @@
      <property name="text">
       <string>Motor Setup Wizard</string>
      </property>
-     <property name="icon">
-      <iconset resource="../res.qrc">
-       <normaloff>:/res/icons/Wizard-96.png</normaloff>:/res/icons/Wizard-96.png</iconset>
-     </property>
     </widget>
    </item>
   </layout>
@@ -37,8 +33,6 @@
    <header>widgets/vtextbrowser.h</header>
   </customwidget>
  </customwidgets>
- <resources>
-  <include location="../res.qrc"/>
- </resources>
+ <resources/>
  <connections/>
 </ui>

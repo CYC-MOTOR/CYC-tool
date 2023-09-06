@@ -50,7 +50,7 @@
 === FW 5.02 ===
 * IMU calibration improvement.
 * Added COMM_GET_MCCONF_TEMP command.
-* Added bidirectional current command to VESC remote.
+* Added bidirectional current command to EBMX remote.
 * Fixed motor temperature reading on hw with ADC mux.
 * Added speed PID input ramping option.
 * Added LSM6DS3 IMU support.
@@ -62,12 +62,12 @@
 * Added bm support for STM32F30x and STM32L47x.
 * App Balance updates. See https://github.com/vedderb/bldc/pull/193
 * Motor current now based on magnitude of both axes.
-* Initial VESC BMS support.
+* Initial EBMX BMS support.
 * Hall sensor interpolation improvement.
 * Made hall sensor filter configurable.
 * Added locking time and ramp up time parameters to sensorless startup.
 * Removed D axis current injection.
-* Initial VESC IO-board support.
+* Initial EBMX IO-board support.
 * Added hall sensor interpolation ERPM config option.
 * Use fast speed estimator for RPM limit.
 * Avoid accumulated rounding error when using PID position angle division.
@@ -82,7 +82,7 @@
 * Fixed PPM bug in previous release.
 
 === FW 5.00 ===
-* Dual motor support. VESC-based controllers such as the focbox unity will now work.
+* Dual motor support. EBMX-based controllers such as the focbox unity will now work.
 * Fixed bug in cross BEMF decoupling.
 * Disable CC decoupling during flux linkage measurement.
 * Balance app updates. See: https://github.com/vedderb/bldc/pull/141
@@ -109,7 +109,7 @@
 * More filtering on the motor temperature.
 * Added IMU orientation calibration support: https://github.com/vedderb/bldc/pull/158
 * Added mcconf_l_duty_start so that the current can be limited smoothly when reaching max speed.
-* Allow throttle in opposite direction even after passing speed limit for PPM and VESC Remote apps.
+* Allow throttle in opposite direction even after passing speed limit for PPM and EBMX Remote apps.
 
 === FW 4.02 ===
 * Position PID fix (most notable on multiturn encoders).
@@ -127,7 +127,7 @@
 
 === FW 4.00 ===
 * Added support for HFI to track motor position at 0 speed without sensors. This is the main new feature of FW 4.
-* Fixed CAN-bug in VESC Remote.
+* Fixed CAN-bug in EBMX Remote.
 * Reset current integrator when leaving duty cycle control mode. Fixes braking issue #125.
 * More accurate and faster inductance measurement.
 * Ability to measyre ld - lq. Useful for MTPA in future firmwares.
@@ -195,7 +195,7 @@
 * Added app template.
 * Added function to unregister terminal callbacks.
 * Added BMI160 support.
-* Added support for the VESC HD.
+* Added support for the EBMX HD.
 * Added support for SWD programming permanent NRF.
 * Encoder SW SPI fix.
 * Slightly faster boot.
@@ -231,7 +231,7 @@
 * New ADC control mode.
 * Virtual motor support.
 * Disable chuk cruise control on dropouts.
-* Fix multiple VESCs over CAN duty cycle mode.
+* Fix multiple EBMXs over CAN duty cycle mode.
 * Added boot and runtime flash memory CRC integrity check.
 * Updated chuk RPM filter and moved it to the beginning of the output thread.
 * Decreased chuk output thread rate from 1 kHz to 200 Hz.
@@ -243,7 +243,7 @@
 === FW 3.54 ===
 * Added mcpwm_foc_set_openloop_duty and mcpwm_foc_set_openloop_duty_phase.
 * Added blackmagic probe SWD output to program other MCUs.
- - Can be used to flash bricked VESCs from a working one.
+ - Can be used to flash bricked EBMXs from a working one.
  - Can be used to make a custom NRF5x module.
 
 === FW 3.53 ===
@@ -372,7 +372,7 @@
 === FW 3.34 ===
 * Added motor PID position to COMM_GET_VALUES.
 * Inverted direction angle normalization in mc_interface.
-* Use relative current mode in APP_ADC to support multiple VESCs with different current limits.
+* Use relative current mode in APP_ADC to support multiple EBMXs with different current limits.
 
 === FW 3.33 ===
 * Fixed CAN-bus baud rate update.
@@ -411,7 +411,7 @@
 * Openloop RPM calculation bug fix.
 
 === FW 3.25 ===
-* APP multi-VESC PID control: send current instead of duty cycle for better load sharing.
+* APP multi-EBMX PID control: send current instead of duty cycle for better load sharing.
 * Added relative current commands to mc_interface and comm_can.
 * APP ADC: added mode ADC_CTRL_TYPE_CURRENT_REV_BUTTON_BRAKE_ADC.
 * APP ADC: changed behavior when throttle and brake ADC channels are used simultaneously for smoother combination.
@@ -446,7 +446,7 @@
 * Moved sampling buffers to CCM to free some RAM.
 * Added hardware info terminal command.
 * NRF init SPI check fix.
-* Sampled data is now transmitted in floating point with scaling done at the VESC. This avoids hard-coded scaling in VESC Tool.
+* Sampled data is now transmitted in floating point with scaling done at the EBMX. This avoids hard-coded scaling in EBMX Tool.
 
 === FW 3.18 ===
 * NRF init SPI check.
@@ -526,7 +526,7 @@
 
 === FW 3.4 ===
 * HW version built into firmware.
- - Allows VESC Tool to only list firmwares compatible with the hardware.
+ - Allows EBMX Tool to only list firmwares compatible with the hardware.
 
 === FW 3.2 ===
 * hw_60 support.

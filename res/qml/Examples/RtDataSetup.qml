@@ -1,14 +1,14 @@
 /*
     Copyright 2018 - 2021 Benjamin Vedder	benjamin@vedder.se
 
-    This file is part of VESC Tool.
+    This file is part of EBMX Tool.
 
-    VESC Tool is free software: you can redistribute it and/or modify
+    EBMX Tool is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    VESC Tool is distributed in the hope that it will be useful,
+    EBMX Tool is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
@@ -24,18 +24,18 @@ import QtQuick.Controls.Styles 1.4
 import QtGraphicalEffects 1.0
 import QtQuick.Controls.Material 2.2
 
-import Vedder.vesc.vescinterface 1.0
-import Vedder.vesc.utility 1.0
-import Vedder.vesc.commands 1.0
-import Vedder.vesc.configparams 1.0
+import Vedder.EBMX.EBMXinterface 1.0
+import Vedder.EBMX.utility 1.0
+import Vedder.EBMX.commands 1.0
+import Vedder.EBMX.configparams 1.0
 
 Item {
     id: rtData
     property var dialogParent: ApplicationWindow.overlay
     anchors.fill: parent
 
-    property Commands mCommands: VescIf.commands()
-    property ConfigParams mMcConf: VescIf.mcConfig()
+    property Commands mCommands: EBMXIf.commands()
+    property ConfigParams mMcConf: EBMXIf.mcConfig()
     property int odometerValue: 0
     property double efficiency_lpf: 0
     property bool isHorizontal: rtData.width > rtData.height
@@ -128,7 +128,7 @@ Item {
                 maxAngle: 45
                 labelStep: maximumValue > 60 ? 20 : 10
                 value: 20
-                unitText: VescIf.useImperialUnits() ? "mph" : "km/h"
+                unitText: EBMXIf.useImperialUnits() ? "mph" : "km/h"
                 typeText: "Speed"
                 CustomGauge {
                     id: batteryGauge
@@ -173,7 +173,7 @@ Item {
                 maximumValue:  50
                 labelStep: maximumValue > 60 ? 20 : 10
                 value: 20
-                unitText: VescIf.useImperialUnits() ? "Wh/mi" : "Wh/km"
+                unitText: EBMXIf.useImperialUnits() ? "Wh/mi" : "Wh/km"
                 typeText: "Consump"
                 nibColor: value < 15 ? "green" : (value < 30 ? Utility.getAppHexColor("orange") : Utility.getAppHexColor("red"))
                 Behavior on nibColor {
@@ -252,7 +252,7 @@ Item {
             Text {
                 id: valText
                 color: Utility.getAppHexColor("lightText")
-                text: VescIf.getConnectedPortName()
+                text: EBMXIf.getConnectedPortName()
                 font.family: "DejaVu Sans Mono"
                 verticalAlignment: Text.AlignVCenter
                 anchors.left: parent.left
@@ -263,7 +263,7 @@ Item {
             Text {
                 id: valText2
                 color: Utility.getAppHexColor("lightText")
-                text: VescIf.getConnectedPortName()
+                text: EBMXIf.getConnectedPortName()
                 font.family: "DejaVu Sans Mono"
                 verticalAlignment: Text.AlignVCenter
                 anchors.left: parent.horizontalCenter
@@ -281,7 +281,7 @@ Item {
                 anchors.fill: parent
 
                 onClicked: {
-                    var impFact = VescIf.useImperialUnits() ? 0.621371192 : 1.0
+                    var impFact = EBMXIf.useImperialUnits() ? 0.621371192 : 1.0
                     odometerBox.realValue = odometerValue*impFact/1000.0
                     tripDialog.open()
                 }
@@ -303,7 +303,7 @@ Item {
                     parent: dialogParent
                     standardButtons: Dialog.Ok | Dialog.Cancel
                     onAccepted: {
-                        var impFact = VescIf.useImperialUnits() ? 0.621371192 : 1.0
+                        var impFact = EBMXIf.useImperialUnits() ? 0.621371192 : 1.0
                         mCommands.setOdometer(Math.round(odometerBox.realValue*1000/impFact))
                     }
 
@@ -353,7 +353,7 @@ Item {
         }
 
         onValuesSetupReceived: {
-            currentGauge.maximumValue = Math.ceil(mMcConf.getParamDouble("l_current_max") / 5) * 5 * values.num_vescs
+            currentGauge.maximumValue = Math.ceil(mMcConf.getParamDouble("l_current_max") / 5) * 5 * values.num_EBMXs
             currentGauge.minimumValue = -currentGauge.maximumValue
             currentGauge.labelStep = Math.ceil(currentGauge.maximumValue / 20) * 5
 
@@ -362,7 +362,7 @@ Item {
             dutyGauge.value = values.duty_now * 100.0
             batteryGauge.value = values.battery_level * 100.0
 
-            var useImperial = VescIf.useImperialUnits()
+            var useImperial = EBMXIf.useImperialUnits()
             var fl = mMcConf.getParamDouble("foc_motor_flux_linkage")
             var rpmMax = (values.v_in * 60.0) / (Math.sqrt(3.0) * 2.0 * Math.PI * fl)
             var speedFact = ((mMcConf.getParamInt("si_motor_poles") / 2.0) * 60.0 *
@@ -386,7 +386,7 @@ Item {
 
             var powerMax = Math.min(values.v_in * Math.min(mMcConf.getParamDouble("l_in_current_max"),
                                                            mMcConf.getParamDouble("l_current_max")),
-                                    mMcConf.getParamDouble("l_watt_max")) * values.num_vescs
+                                    mMcConf.getParamDouble("l_watt_max")) * values.num_EBMXs
             var powerMaxRound = (Math.ceil(powerMax / 1000.0) * 1000.0)
 
             if (Math.abs(powerGauge.maximumValue - powerMaxRound) > 1.2) {

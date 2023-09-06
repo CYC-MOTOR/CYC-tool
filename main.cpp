@@ -107,9 +107,9 @@ static void addFonts() {
 int main(int argc, char *argv[])
 {
     // Settings
-    QCoreApplication::setOrganizationName("VESC");
-    QCoreApplication::setOrganizationDomain("vesc-project.com");
-    QCoreApplication::setApplicationName("VESC Tool");
+    QCoreApplication::setOrganizationName("EBMX");
+    QCoreApplication::setOrganizationDomain("ebmx.com");
+    QCoreApplication::setApplicationName("EBMX Tool");
     QSettings set;
     bool isDark = set.value("darkMode", true).toBool();
     Utility::setDarkMode(isDark);

@@ -1,4 +1,4 @@
-// This is an example of using the VESC as a CAN-debugger. It demonstrates:
+// This is an example of using the EBMX as a CAN-debugger. It demonstrates:
 // * Changing the app configuration to forward CAN-frames
 // * Receiving and decoding CAN-frames
 // * Encoding and transmitting CAN-frames
@@ -8,18 +8,18 @@ import QtQuick 2.5
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
-import Vedder.vesc.utility 1.0
+import Vedder.EBMX.utility 1.0
 
-import Vedder.vesc.commands 1.0
-import Vedder.vesc.configparams 1.0
+import Vedder.EBMX.commands 1.0
+import Vedder.EBMX.configparams 1.0
 import "qrc:/mobile"
 
 Item {
     anchors.fill: parent
     anchors.margins: 10
     
-    property Commands mCommands: VescIf.commands()
-    property ConfigParams mAppConf: VescIf.appConfig()
+    property Commands mCommands: EBMXIf.commands()
+    property ConfigParams mAppConf: EBMXIf.appConfig()
     
     property var cellv: []
     property var cellt: []

@@ -2,16 +2,16 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
-import Vedder.vesc.utility 1.0
+import Vedder.EBMX.utility 1.0
 
-import Vedder.vesc.commands 1.0
+import Vedder.EBMX.commands 1.0
 
 Item {
     id: mainItem
     anchors.fill: parent
     anchors.margins: 5
     
-    property Commands mCommands: VescIf.commands()
+    property Commands mCommands: EBMXIf.commands()
     property var plotx: 0
     
     Text {

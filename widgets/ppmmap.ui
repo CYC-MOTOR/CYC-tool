@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>512</width>
-    <height>181</height>
+    <height>184</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -187,7 +187,7 @@
            <string>VESC Tool preview with the current settings.</string>
           </property>
           <property name="text">
-           <string>VESC Tool</string>
+           <string>EBMX Tool</string>
           </property>
          </widget>
         </item>
@@ -230,15 +230,6 @@
        </layout>
       </item>
      </layout>
-     <zorder>display</zorder>
-     <zorder>controlTypeBox</zorder>
-     <zorder>resetButton</zorder>
-     <zorder>helpButton</zorder>
-     <zorder>applyButton</zorder>
-     <zorder>centerBox</zorder>
-     <zorder>label</zorder>
-     <zorder>label_2</zorder>
-     <zorder>displayVesc</zorder>
     </widget>
    </item>
   </layout>

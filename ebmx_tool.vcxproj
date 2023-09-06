@@ -1,0 +1,1286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2E27FDEB-B58F-308D-934D-1B49BF8909A2}</ProjectGuid>
+    <RootNamespace>ebmx_tool</RootNamespace>
+    <Keyword>QtVS_v304</Keyword>
+    <WindowsTargetPlatformVersion>10.0.22621.0</WindowsTargetPlatformVersion>
+    <WindowsTargetPlatformMinVersion>10.0.22621.0</WindowsTargetPlatformMinVersion>
+    <QtMsBuild Condition="'$(QtMsBuild)'=='' or !Exists('$(QtMsBuild)\qt.targets')">$(MSBuildProjectDirectory)\QtMsBuild</QtMsBuild>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>release\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>release\</IntermediateDirectory>
+    <PrimaryOutput>ebmx_tool</PrimaryOutput>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <PlatformToolset>v143</PlatformToolset>
+    <OutputDirectory>debug\</OutputDirectory>
+    <ATLMinimizesCRunTimeLibraryUsage>false</ATLMinimizesCRunTimeLibraryUsage>
+    <CharacterSet>NotSet</CharacterSet>
+    <ConfigurationType>Application</ConfigurationType>
+    <IntermediateDirectory>debug\</IntermediateDirectory>
+    <PrimaryOutput>ebmx_tool</PrimaryOutput>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <Target Name="QtMsBuildNotFound" BeforeTargets="CustomBuild;ClCompile" Condition="!Exists('$(QtMsBuild)\qt.targets') or !Exists('$(QtMsBuild)\qt.props')">
+    <Message Importance="High" Text="QtMsBuild: could not locate qt.targets, qt.props; project may not build correctly." />
+  </Target>
+  <ImportGroup Label="ExtensionSettings" />
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt_defaults.props')">
+    <Import Project="$(QtMsBuild)\qt_defaults.props" />
+  </ImportGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <OutDir>debug\</OutDir>
+    <IntDir>debug\</IntDir>
+    <TargetName>ebmx_tool</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <OutDir>release\</OutDir>
+    <IntDir>release\</IntDir>
+    <TargetName>ebmx_tool</TargetName>
+    <IgnoreImportLibrary>true</IgnoreImportLibrary>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <QtInstall>5.14.1_msvc2017_64</QtInstall>
+    <QtModules>core;core-private;network;gui;gui-private;svg;widgets;qml;positioning;serialport;printsupport;quickwidgets;quick;gamepad;quickcontrols2</QtModules>
+    <QtPlugin>false</QtPlugin>
+    <QtDeploy>false</QtDeploy>
+  </PropertyGroup>
+  <PropertyGroup Label="QtSettings" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <QtInstall>5.14.1_msvc2017_64</QtInstall>
+    <QtModules>core;core-private;network;gui;gui-private;svg;widgets;qml;positioning;serialport;printsupport;quickwidgets;quick;gamepad;quickcontrols2</QtModules>
+    <QtPlugin>true</QtPlugin>
+    <QtDeploy>true</QtDeploy>
+  </PropertyGroup>
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.props')">
+    <Import Project="$(QtMsBuild)\qt.props" />
+  </ImportGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;QCodeEditor\include;release;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>release\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>None</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>release\</ObjectFileName>
+      <Optimization>MaxSpeed</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;VT_VERSION=3.01;VT_INTRO_VERSION=1;VT_CONFIG_VERSION=2;VT_IS_TEST_VERSION=0;HAS_POS;HAS_SERIALPORT;HAS_GAMEPAD;_USE_MATH_DEFINES;VER_NEUTRAL;QT_NO_DEBUG;QT_QMLMODELS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <ProgramDataBaseFileName>
+      </ProgramDataBaseFileName>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\Qt5QmlModels.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <LinkIncremental>false</LinkIncremental>
+      <OptimizeReferences>true</OptimizeReferences>
+      <OutputFile>$(OutDir)\ebmx_tool.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;NDEBUG;VT_VERSION=3.01;VT_INTRO_VERSION=1;VT_CONFIG_VERSION=2;VT_IS_TEST_VERSION=0;HAS_POS;HAS_SERIALPORT;HAS_GAMEPAD;_USE_MATH_DEFINES;VER_NEUTRAL;QT_NO_DEBUG;QT_QMLMODELS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(ProjectDir)</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <AdditionalIncludeDirectories>.;QCodeEditor\include;debug;/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus %(AdditionalOptions)</AdditionalOptions>
+      <AssemblerListingLocation>debug\</AssemblerListingLocation>
+      <BrowseInformation>false</BrowseInformation>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ExceptionHandling>Sync</ExceptionHandling>
+      <ObjectFileName>debug\</ObjectFileName>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;VT_VERSION=3.01;VT_INTRO_VERSION=1;VT_CONFIG_VERSION=2;VT_IS_TEST_VERSION=0;HAS_POS;HAS_SERIALPORT;HAS_GAMEPAD;_USE_MATH_DEFINES;VER_NEUTRAL;QT_QMLMODELS_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessToFile>false</PreprocessToFile>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+      <TreatWChar_tAsBuiltInType>true</TreatWChar_tAsBuiltInType>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>$(QTDIR)\lib\Qt5QmlModelsd.lib;shell32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>C:\openssl\lib;C:\Utils\my_sql\mysql-5.7.25-winx64\lib;C:\Utils\postgresql\pgsql\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalOptions>"/MANIFESTDEPENDENCY:type='win32' name='Microsoft.Windows.Common-Controls' version='6.0.0.0' publicKeyToken='6595b64144ccf1df' language='*' processorArchitecture='*'" %(AdditionalOptions)</AdditionalOptions>
+      <DataExecutionPrevention>true</DataExecutionPrevention>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreImportLibrary>true</IgnoreImportLibrary>
+      <OutputFile>$(OutDir)\ebmx_tool.exe</OutputFile>
+      <RandomizedBaseAddress>true</RandomizedBaseAddress>
+      <SubSystem>Windows</SubSystem>
+      <SuppressStartupBanner>true</SuppressStartupBanner>
+    </Link>
+    <Midl>
+      <DefaultCharType>Unsigned</DefaultCharType>
+      <EnableErrorChecks>None</EnableErrorChecks>
+      <WarningLevel>0</WarningLevel>
+    </Midl>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_WINDOWS;UNICODE;_UNICODE;WIN32;_ENABLE_EXTENDED_ALIGNED_STORAGE;WIN64;VT_VERSION=3.01;VT_INTRO_VERSION=1;VT_CONFIG_VERSION=2;VT_IS_TEST_VERSION=0;HAS_POS;HAS_SERIALPORT;HAS_GAMEPAD;_USE_MATH_DEFINES;VER_NEUTRAL;QT_QMLMODELS_LIB;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+    </ResourceCompile>
+    <QtMoc>
+      <CompilerFlavor>msvc</CompilerFlavor>
+      <Include>./$(Configuration)/moc_predefs.h</Include>
+      <ExecutionDescription>Moc'ing %(Identity)...</ExecutionDescription>
+      <DynamicSource>output</DynamicSource>
+      <QtMocDir>$(Configuration)</QtMocDir>
+      <QtMocFileName>moc_%(Filename).cpp</QtMocFileName>
+    </QtMoc>
+    <QtRcc>
+      <Compression>default</Compression>
+      <ExecutionDescription>Rcc'ing %(Identity)...</ExecutionDescription>
+      <QtRccDir>$(Configuration)</QtRccDir>
+      <QtRccFileName>qrc_%(Filename).cpp</QtRccFileName>
+    </QtRcc>
+    <QtUic>
+      <ExecutionDescription>Uic'ing %(Identity)...</ExecutionDescription>
+      <QtUicDir>$(ProjectDir)</QtUicDir>
+      <QtUicFileName>ui_%(Filename).h</QtUicFileName>
+    </QtUic>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="QCodeEditor\src\internal\QCXXHighlighter.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QCodeEditor.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QFramedTextAttribute.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QGLSLCompleter.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QGLSLHighlighter.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QJSONHighlighter.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QLanguage.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QLineNumberArea.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QLuaCompleter.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QLuaHighlighter.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QPythonCompleter.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QPythonHighlighter.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QStyleSyntaxHighlighter.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QSyntaxStyle.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QVescCompleter.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QXMLHighlighter.cpp" />
+    <ClCompile Include="QCodeEditor\src\internal\QmlHighlighter.cpp" />
+    <ClCompile Include="widgets\adcmap.cpp" />
+    <ClCompile Include="widgets\aspectimglabel.cpp" />
+    <ClCompile Include="widgets\batterycalculator.cpp" />
+    <ClCompile Include="widgets\batttempplot.cpp" />
+    <ClCompile Include="widgets\canlistitem.cpp" />
+    <ClCompile Include="map\carinfo.cpp" />
+    <ClCompile Include="commands.cpp" />
+    <ClCompile Include="configparam.cpp" />
+    <ClCompile Include="configparams.cpp" />
+    <ClCompile Include="map\copterinfo.cpp" />
+    <ClCompile Include="widgets\detectallfocdialog.cpp" />
+    <ClCompile Include="widgets\detectbldc.cpp" />
+    <ClCompile Include="widgets\detectfoc.cpp" />
+    <ClCompile Include="widgets\detectfocencoder.cpp" />
+    <ClCompile Include="widgets\detectfochall.cpp" />
+    <ClCompile Include="widgets\detectimu.cpp" />
+    <ClCompile Include="digitalfiltering.cpp" />
+    <ClCompile Include="widgets\dirsetup.cpp" />
+    <ClCompile Include="widgets\displaybar.cpp" />
+    <ClCompile Include="widgets\displaypercentage.cpp" />
+    <ClCompile Include="mobile\fwhelper.cpp" />
+    <ClCompile Include="widgets\helpdialog.cpp" />
+    <ClCompile Include="hexfile.cpp" />
+    <ClCompile Include="widgets\historylineedit.cpp" />
+    <ClCompile Include="widgets\imagewidget.cpp" />
+    <ClCompile Include="map\locpoint.cpp" />
+    <ClCompile Include="mobile\logreader.cpp" />
+    <ClCompile Include="mobile\logwriter.cpp" />
+    <ClCompile Include="lzokay\lzokay.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="mainwindow.cpp" />
+    <ClCompile Include="map\mapwidget.cpp" />
+    <ClCompile Include="widgets\mrichtextedit.cpp" />
+    <ClCompile Include="widgets\mtextedit.cpp" />
+    <ClCompile Include="widgets\nrfpair.cpp" />
+    <ClCompile Include="map\osmclient.cpp" />
+    <ClCompile Include="map\osmtile.cpp" />
+    <ClCompile Include="packet.cpp" />
+    <ClCompile Include="pages\pageappadc.cpp" />
+    <ClCompile Include="pages\pageappbalance.cpp" />
+    <ClCompile Include="pages\pageappgeneral.cpp" />
+    <ClCompile Include="pages\pageappimu.cpp" />
+    <ClCompile Include="pages\pageappnrf.cpp" />
+    <ClCompile Include="pages\pageappnunchuk.cpp" />
+    <ClCompile Include="pages\pageapppas.cpp" />
+    <ClCompile Include="pages\pageappppm.cpp" />
+    <ClCompile Include="pages\pageappsettings.cpp" />
+    <ClCompile Include="pages\pageappuart.cpp" />
+    <ClCompile Include="pages\pagebldc.cpp" />
+    <ClCompile Include="pages\pagebms.cpp" />
+    <ClCompile Include="pages\pagecananalyzer.cpp" />
+    <ClCompile Include="pages\pageconnection.cpp" />
+    <ClCompile Include="pages\pagecontrollers.cpp" />
+    <ClCompile Include="pages\pagecustomconfig.cpp" />
+    <ClCompile Include="pages\pagedataanalysis.cpp" />
+    <ClCompile Include="pages\pagedc.cpp" />
+    <ClCompile Include="pages\pagedebugprint.cpp" />
+    <ClCompile Include="pages\pageexperiments.cpp" />
+    <ClCompile Include="pages\pagefirmware.cpp" />
+    <ClCompile Include="pages\pagefoc.cpp" />
+    <ClCompile Include="pages\pagegpd.cpp" />
+    <ClCompile Include="pages\pageimu.cpp" />
+    <ClCompile Include="widgets\pagelistitem.cpp" />
+    <ClCompile Include="pages\pageloganalysis.cpp" />
+    <ClCompile Include="pages\pagemotor.cpp" />
+    <ClCompile Include="pages\pagemotorcomparison.cpp" />
+    <ClCompile Include="pages\pagemotorinfo.cpp" />
+    <ClCompile Include="pages\pagemotorsettings.cpp" />
+    <ClCompile Include="pages\pagertdata.cpp" />
+    <ClCompile Include="pages\pagesampleddata.cpp" />
+    <ClCompile Include="pages\pagescripting.cpp" />
+    <ClCompile Include="pages\pagesetupcalculators.cpp" />
+    <ClCompile Include="pages\pageswdprog.cpp" />
+    <ClCompile Include="pages\pageterminal.cpp" />
+    <ClCompile Include="pages\pagewelcome.cpp" />
+    <ClCompile Include="widgets\paramdialog.cpp" />
+    <ClCompile Include="widgets\parameditbool.cpp" />
+    <ClCompile Include="widgets\parameditdouble.cpp" />
+    <ClCompile Include="widgets\parameditenum.cpp" />
+    <ClCompile Include="widgets\parameditint.cpp" />
+    <ClCompile Include="widgets\parameditstring.cpp" />
+    <ClCompile Include="parametereditor.cpp" />
+    <ClCompile Include="widgets\paramtable.cpp" />
+    <ClCompile Include="map\perspectivepixmap.cpp" />
+    <ClCompile Include="widgets\ppmmap.cpp" />
+    <ClCompile Include="preferences.cpp" />
+    <ClCompile Include="widgets\qcustomplot.cpp" />
+    <ClCompile Include="widgets\qmleditor.cpp" />
+    <ClCompile Include="mobile\qmlui.cpp" />
+    <ClCompile Include="widgets\rtdatatext.cpp" />
+    <ClCompile Include="setupwizardapp.cpp" />
+    <ClCompile Include="setupwizardmotor.cpp" />
+    <ClCompile Include="startupwizard.cpp" />
+    <ClCompile Include="widgets\superslider.cpp" />
+    <ClCompile Include="tcpserversimple.cpp" />
+    <ClCompile Include="udpserversimple.cpp" />
+    <ClCompile Include="utility.cpp" />
+    <ClCompile Include="vbytearray.cpp" />
+    <ClCompile Include="mobile\vesc3ditem.cpp" />
+    <ClCompile Include="widgets\vesc3dview.cpp" />
+    <ClCompile Include="vescinterface.cpp" />
+    <ClCompile Include="widgets\vtextbrowser.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QCodeEditor\include\internal\QCXXHighlighter.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QCodeEditor.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QFramedTextAttribute.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QGLSLCompleter.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QGLSLHighlighter.hpp">
+    </QtMoc>
+    <ClInclude Include="QCodeEditor\include\internal\QHighlightBlockRule.hpp" />
+    <ClInclude Include="QCodeEditor\include\internal\QHighlightRule.hpp" />
+    <QtMoc Include="QCodeEditor\include\internal\QJSONHighlighter.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QLanguage.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QLineNumberArea.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QLuaCompleter.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QLuaHighlighter.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QPythonCompleter.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QPythonHighlighter.hpp">
+    </QtMoc>
+    <ClInclude Include="QCodeEditor\include\internal\QStyleSyntaxHighlighter.hpp" />
+    <QtMoc Include="QCodeEditor\include\internal\QSyntaxStyle.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QVescCompleter.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QXMLHighlighter.hpp">
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QmlHighlighter.hpp">
+    </QtMoc>
+    <QtMoc Include="widgets\adcmap.h">
+    </QtMoc>
+    <QtMoc Include="widgets\aspectimglabel.h">
+    </QtMoc>
+    <QtMoc Include="widgets\batterycalculator.h">
+    </QtMoc>
+    <QtMoc Include="widgets\batttempplot.h">
+    </QtMoc>
+    <QtMoc Include="widgets\canlistitem.h">
+    </QtMoc>
+    <ClInclude Include="map\carinfo.h" />
+    <QtMoc Include="commands.h">
+    </QtMoc>
+    <ClInclude Include="configparam.h" />
+    <QtMoc Include="configparams.h">
+    </QtMoc>
+    <ClInclude Include="map\copterinfo.h" />
+    <QtMoc Include="datatypes.h">
+    </QtMoc>
+    <QtMoc Include="widgets\detectallfocdialog.h">
+    </QtMoc>
+    <QtMoc Include="widgets\detectbldc.h">
+    </QtMoc>
+    <QtMoc Include="widgets\detectfoc.h">
+    </QtMoc>
+    <QtMoc Include="widgets\detectfocencoder.h">
+    </QtMoc>
+    <QtMoc Include="widgets\detectfochall.h">
+    </QtMoc>
+    <QtMoc Include="widgets\detectimu.h">
+    </QtMoc>
+    <ClInclude Include="digitalfiltering.h" />
+    <QtMoc Include="widgets\dirsetup.h">
+    </QtMoc>
+    <QtMoc Include="widgets\displaybar.h">
+    </QtMoc>
+    <QtMoc Include="widgets\displaypercentage.h">
+    </QtMoc>
+    <QtMoc Include="mobile\fwhelper.h">
+    </QtMoc>
+    <QtMoc Include="widgets\helpdialog.h">
+    </QtMoc>
+    <ClInclude Include="hexfile.h" />
+    <ClInclude Include="widgets\historylineedit.h" />
+    <QtMoc Include="widgets\imagewidget.h">
+    </QtMoc>
+    <ClInclude Include="map\locpoint.h" />
+    <QtMoc Include="mobile\logreader.h">
+    </QtMoc>
+    <QtMoc Include="mobile\logwriter.h">
+    </QtMoc>
+    <ClInclude Include="lzokay\lzokay.hpp" />
+    <QtMoc Include="mainwindow.h">
+    </QtMoc>
+    <QtMoc Include="map\mapwidget.h">
+    </QtMoc>
+    <QtMoc Include="widgets\mrichtextedit.h">
+    </QtMoc>
+    <QtMoc Include="widgets\mtextedit.h">
+    </QtMoc>
+    <QtMoc Include="widgets\nrfpair.h">
+    </QtMoc>
+    <QtMoc Include="map\osmclient.h">
+    </QtMoc>
+    <ClInclude Include="map\osmtile.h" />
+    <QtMoc Include="packet.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageappadc.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageappbalance.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageappgeneral.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageappimu.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageappnrf.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageappnunchuk.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageapppas.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageappppm.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageappsettings.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageappuart.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagebldc.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagebms.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagecananalyzer.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageconnection.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagecontrollers.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagecustomconfig.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagedataanalysis.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagedc.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagedebugprint.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageexperiments.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagefirmware.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagefoc.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagegpd.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageimu.h">
+    </QtMoc>
+    <QtMoc Include="widgets\pagelistitem.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageloganalysis.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagemotor.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagemotorcomparison.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagemotorinfo.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagemotorsettings.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagertdata.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagesampleddata.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagescripting.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagesetupcalculators.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageswdprog.h">
+    </QtMoc>
+    <QtMoc Include="pages\pageterminal.h">
+    </QtMoc>
+    <QtMoc Include="pages\pagewelcome.h">
+    </QtMoc>
+    <QtMoc Include="widgets\paramdialog.h">
+    </QtMoc>
+    <QtMoc Include="widgets\parameditbool.h">
+    </QtMoc>
+    <QtMoc Include="widgets\parameditdouble.h">
+    </QtMoc>
+    <QtMoc Include="widgets\parameditenum.h">
+    </QtMoc>
+    <QtMoc Include="widgets\parameditint.h">
+    </QtMoc>
+    <QtMoc Include="widgets\parameditstring.h">
+    </QtMoc>
+    <QtMoc Include="parametereditor.h">
+    </QtMoc>
+    <ClInclude Include="widgets\paramtable.h" />
+    <ClInclude Include="map\perspectivepixmap.h" />
+    <QtMoc Include="widgets\ppmmap.h">
+    </QtMoc>
+    <QtMoc Include="preferences.h">
+    </QtMoc>
+    <QtMoc Include="widgets\qcustomplot.h">
+    </QtMoc>
+    <QtMoc Include="widgets\qmleditor.h">
+    </QtMoc>
+    <QtMoc Include="mobile\qmlui.h">
+    </QtMoc>
+    <QtMoc Include="widgets\rtdatatext.h">
+    </QtMoc>
+    <QtMoc Include="setupwizardapp.h">
+    </QtMoc>
+    <QtMoc Include="setupwizardmotor.h">
+    </QtMoc>
+    <QtMoc Include="startupwizard.h">
+    </QtMoc>
+    <QtMoc Include="widgets\superslider.h">
+    </QtMoc>
+    <QtMoc Include="tcpserversimple.h">
+    </QtMoc>
+    <QtMoc Include="udpserversimple.h">
+    </QtMoc>
+    <QtMoc Include="utility.h">
+    </QtMoc>
+    <ClInclude Include="vbytearray.h" />
+    <QtMoc Include="mobile\vesc3ditem.h">
+    </QtMoc>
+    <QtMoc Include="widgets\vesc3dview.h">
+    </QtMoc>
+    <QtMoc Include="vescinterface.h">
+    </QtMoc>
+    <QtMoc Include="widgets\vtextbrowser.h">
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</ExcludedFromBuild>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -Zi -MDd -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;debug\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">debug\moc_predefs.h;%(Outputs)</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <FileType>Document</FileType>
+      <AdditionalInputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">$(QTDIR)\mkspecs\features\data\dummy.cpp;%(AdditionalInputs)</AdditionalInputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|x64'">cl -Bx"$(QTDIR)\bin\qmake.exe" -nologo -Zc:wchar_t -FS -Zc:rvalueCast -Zc:inline -Zc:strictStrings -Zc:throwingNew -Zc:referenceBinding -Zc:__cplusplus -O2 -MD -E $(QTDIR)\mkspecs\features\data\dummy.cpp 2&gt;NUL &gt;release\moc_predefs.h</Command>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Release|x64'">Generate moc_predefs.h</Message>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|x64'">release\moc_predefs.h;%(Outputs)</Outputs>
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</ExcludedFromBuild>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="widgets\adcmap.ui">
+    </QtUic>
+    <QtUic Include="widgets\batterycalculator.ui">
+    </QtUic>
+    <QtUic Include="widgets\detectallfocdialog.ui">
+    </QtUic>
+    <QtUic Include="widgets\detectbldc.ui">
+    </QtUic>
+    <QtUic Include="widgets\detectfoc.ui">
+    </QtUic>
+    <QtUic Include="widgets\detectfocencoder.ui">
+    </QtUic>
+    <QtUic Include="widgets\detectfochall.ui">
+    </QtUic>
+    <QtUic Include="widgets\detectimu.ui">
+    </QtUic>
+    <QtUic Include="widgets\dirsetup.ui">
+    </QtUic>
+    <QtUic Include="widgets\helpdialog.ui">
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
+    </QtUic>
+    <QtUic Include="widgets\mrichtextedit.ui">
+    </QtUic>
+    <QtUic Include="widgets\nrfpair.ui">
+    </QtUic>
+    <QtUic Include="pages\pageappadc.ui">
+    </QtUic>
+    <QtUic Include="pages\pageappbalance.ui">
+    </QtUic>
+    <QtUic Include="pages\pageappgeneral.ui">
+    </QtUic>
+    <QtUic Include="pages\pageappimu.ui">
+    </QtUic>
+    <QtUic Include="pages\pageappnrf.ui">
+    </QtUic>
+    <QtUic Include="pages\pageappnunchuk.ui">
+    </QtUic>
+    <QtUic Include="pages\pageapppas.ui">
+    </QtUic>
+    <QtUic Include="pages\pageappppm.ui">
+    </QtUic>
+    <QtUic Include="pages\pageappsettings.ui">
+    </QtUic>
+    <QtUic Include="pages\pageappuart.ui">
+    </QtUic>
+    <QtUic Include="pages\pagebldc.ui">
+    </QtUic>
+    <QtUic Include="pages\pagebms.ui">
+    </QtUic>
+    <QtUic Include="pages\pagecananalyzer.ui">
+    </QtUic>
+    <QtUic Include="pages\pageconnection.ui">
+    </QtUic>
+    <QtUic Include="pages\pagecontrollers.ui">
+    </QtUic>
+    <QtUic Include="pages\pagecustomconfig.ui">
+    </QtUic>
+    <QtUic Include="pages\pagedataanalysis.ui">
+    </QtUic>
+    <QtUic Include="pages\pagedc.ui">
+    </QtUic>
+    <QtUic Include="pages\pagedebugprint.ui">
+    </QtUic>
+    <QtUic Include="pages\pageexperiments.ui">
+    </QtUic>
+    <QtUic Include="pages\pagefirmware.ui">
+    </QtUic>
+    <QtUic Include="pages\pagefoc.ui">
+    </QtUic>
+    <QtUic Include="pages\pagegpd.ui">
+    </QtUic>
+    <QtUic Include="pages\pageimu.ui">
+    </QtUic>
+    <QtUic Include="pages\pageloganalysis.ui">
+    </QtUic>
+    <QtUic Include="pages\pagemotor.ui">
+    </QtUic>
+    <QtUic Include="pages\pagemotorcomparison.ui">
+    </QtUic>
+    <QtUic Include="pages\pagemotorinfo.ui">
+    </QtUic>
+    <QtUic Include="pages\pagemotorsettings.ui">
+    </QtUic>
+    <QtUic Include="pages\pagertdata.ui">
+    </QtUic>
+    <QtUic Include="pages\pagesampleddata.ui">
+    </QtUic>
+    <QtUic Include="pages\pagescripting.ui">
+    </QtUic>
+    <QtUic Include="pages\pagesetupcalculators.ui">
+    </QtUic>
+    <QtUic Include="pages\pageswdprog.ui">
+    </QtUic>
+    <QtUic Include="pages\pageterminal.ui">
+    </QtUic>
+    <QtUic Include="pages\pagewelcome.ui">
+    </QtUic>
+    <QtUic Include="widgets\paramdialog.ui">
+    </QtUic>
+    <QtUic Include="widgets\parameditbool.ui">
+    </QtUic>
+    <QtUic Include="widgets\parameditdouble.ui">
+    </QtUic>
+    <QtUic Include="widgets\parameditenum.ui">
+    </QtUic>
+    <QtUic Include="widgets\parameditint.ui">
+    </QtUic>
+    <QtUic Include="widgets\parameditstring.ui">
+    </QtUic>
+    <QtUic Include="parametereditor.ui">
+    </QtUic>
+    <QtUic Include="widgets\ppmmap.ui">
+    </QtUic>
+    <QtUic Include="preferences.ui">
+    </QtUic>
+    <QtUic Include="widgets\qmleditor.ui">
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\images\12s7p_pcb.png" />
+    <None Include="2-96.png" />
+    <None Include="232" />
+    <None Include="res\+theme_light\icons\3ph_sine.png" />
+    <None Include="res\icons\3ph_sine.png" />
+    <None Include="res\bootloaders\40_o_47_o_48_o_410_o_411_o_412_o_DAS_RS.bin" />
+    <None Include="res\bootloaders\60_o_75_300_o_HD60_o_UAVC_OMEGA_o_75_300_R2_o_60_MK3_o_100_250_o_75_300_R3_o_60_MK4_o_60_MK5_o_HD75.bin" />
+    <None Include="res\images\motors\6374.jpg" />
+    <None Include="res\+theme_light\icons\About-96.png" />
+    <None Include="res\icons\About-96.png" />
+    <None Include="mobile\AdcMap.qml" />
+    <None Include="res\+theme_light\icons_textedit\Add" />
+    <None Include="res\icons_textedit\Add" />
+    <None Include="res\+theme_light\icons_textedit\Align" />
+    <None Include="res\icons_textedit\Align" />
+    <None Include="res\+theme_light\icons\Anchor-96.png" />
+    <None Include="res\icons\Anchor-96.png" />
+    <None Include="mobile\BMS.qml" />
+    <None Include="res\qml\Examples\BMS.qml" />
+    <None Include="Backup-96.png" />
+    <None Include="Battery-96.png" />
+    <None Include="res\+theme_light\icons_textedit\Bold-96.png" />
+    <None Include="res\icons_textedit\Bold-96.png" />
+    <None Include="res\qml\Examples\BrakeBench.qml" />
+    <None Include="res\+theme_light\icons\Brake" />
+    <None Include="res\icons\Brake" />
+    <None Include="res\+theme_light\icons\Bug-96.png" />
+    <None Include="res\icons\Bug-96.png" />
+    <None Include="res\+theme_light\icons_textedit\Bulleted" />
+    <None Include="res\icons_textedit\Bulleted" />
+    <None Include="res\CHANGELOG" />
+    <None Include="res\firmwares\CHANGELOG" />
+    <None Include="res\+theme_light\icons\Calculator-96.png" />
+    <None Include="res\icons\Calculator-96.png" />
+    <None Include="res\qml\Examples\CanDebugger.qml" />
+    <None Include="mobile\CanScreen.qml" />
+    <None Include="res\+theme_light\icons\Cancel-96.png" />
+    <None Include="res\icons\Cancel-96.png" />
+    <None Include="res\+theme_light\icons\Car" />
+    <None Include="res\icons\Car" />
+    <None Include="Center-96.png" />
+    <None Include="Chart-96.png" />
+    <None Include="res\+theme_light\icons\Circled" />
+    <None Include="res\icons\Circled" />
+    <None Include="Color-96.png" />
+    <None Include="mobile\ConfigPageApp.qml" />
+    <None Include="mobile\ConfigPageMotor.qml" />
+    <None Include="mobile\ConnectScreen.qml" />
+    <None Include="res\+theme_light\icons\Connected-96.png" />
+    <None Include="res\icons\Connected-96.png" />
+    <None Include="res\+theme_light\icons\Console-96.png" />
+    <None Include="res\icons\Console-96.png" />
+    <None Include="res\+theme_light\icons\Controller-96.png" />
+    <None Include="res\icons\Controller-96.png" />
+    <None Include="res\+theme_light\icons\Controller-96_on.png" />
+    <None Include="res\icons\Controller-96_on.png" />
+    <None Include="mobile\Controls.qml" />
+    <None Include="res\qml\Examples\Controls.qml" />
+    <None Include="res\+theme_light\icons_textedit\Copy-96.png" />
+    <None Include="res\icons_textedit\Copy-96.png" />
+    <None Include="mobile\CustomGauge.qml" />
+    <None Include="mobile\CustomGaugeV2.qml" />
+    <None Include="res\+theme_light\icons_textedit\Cut-96.png" />
+    <None Include="res\icons_textedit\Cut-96.png" />
+    <None Include="Data-96.png" />
+    <None Include="res\+theme_light\icons\Data" />
+    <None Include="res\icons\Data" />
+    <None Include="res\fonts\DejaVuSans-Bold.ttf" />
+    <None Include="res\fonts\DejaVuSans-BoldOblique.ttf" />
+    <None Include="res\fonts\DejaVuSans-Oblique.ttf" />
+    <None Include="res\fonts\DejaVuSans.ttf" />
+    <None Include="res\fonts\DejaVuSansMono-Bold.ttf" />
+    <None Include="res\fonts\DejaVuSansMono-BoldOblique.ttf" />
+    <None Include="res\fonts\DejaVuSansMono-Oblique.ttf" />
+    <None Include="res\fonts\DejaVuSansMono.ttf" />
+    <None Include="res\+theme_light\icons\Delete-96.png" />
+    <None Include="res\icons\Delete-96.png" />
+    <None Include="mobile\DetectBldc.qml" />
+    <None Include="mobile\DetectFocEncoder.qml" />
+    <None Include="mobile\DetectFocHall.qml" />
+    <None Include="mobile\DetectFocParam.qml" />
+    <None Include="mobile\DetectIMU.qml" />
+    <None Include="mobile\DirectionSetup.qml" />
+    <None Include="mobile\DirectoryPicker.qml" />
+    <None Include="res\+theme_light\icons\Disconnected-96.png" />
+    <None Include="res\icons\Disconnected-96.png" />
+    <None Include="mobile\DoubleSpinBox.qml" />
+    <None Include="res\+theme_light\icons\Down-96.png" />
+    <None Include="res\icons\Down-96.png" />
+    <None Include="res\+theme_light\icons\Download-96.png" />
+    <None Include="res\icons\Download-96.png" />
+    <None Include="res\qml\DynamicLoader.qml" />
+    <None Include="res\+theme_light\icons\EUC-96.png" />
+    <None Include="res\icons\EUC-96.png" />
+    <None Include="res\+theme_light\icons\Electronics-96.png" />
+    <None Include="res\icons\Electronics-96.png" />
+    <None Include="res\fonts\Exan-Regular.ttf" />
+    <None Include="res\qml\Examples\ExperimentPlot.qml" />
+    <None Include="File-96.png" />
+    <None Include="mobile\FilePicker.qml" />
+    <None Include="res\+theme_light\icons_textedit\Fill" />
+    <None Include="res\icons_textedit\Fill" />
+    <None Include="Folder-96.png" />
+    <None Include="mobile\FwUpdate.qml" />
+    <None Include="res\qml\Examples\GaugeTest.qml" />
+    <None Include="Group" />
+    <None Include="res\+theme_light\icons\Gyroscope-96.png" />
+    <None Include="res\icons\Gyroscope-96.png" />
+    <None Include="res\+theme_light\icons\Help-96.png" />
+    <None Include="res\icons\Help-96.png" />
+    <None Include="res\+theme_light\icons\Home-96.png" />
+    <None Include="res\icons\Home-96.png" />
+    <None Include="res\+theme_light\icons\Horizontal" />
+    <None Include="res\icons\Horizontal" />
+    <None Include="Image-96.png" />
+    <None Include="mobile\ImageButton.qml" />
+    <None Include="res\+theme_light\icons_textedit\Indent-96.png" />
+    <None Include="res\icons_textedit\Indent-96.png" />
+    <None Include="res\qml\Examples\IoBoard.qml" />
+    <None Include="res\+theme_light\icons_textedit\Italic-96.png" />
+    <None Include="res\icons_textedit\Italic-96.png" />
+    <None Include="Justify-96.png" />
+    <None Include="Left-96.png" />
+    <None Include="res\+theme_light\icons\Line" />
+    <None Include="res\icons\Line" />
+    <None Include="res\+theme_light\icons_textedit\Link-96.png" />
+    <None Include="res\icons_textedit\Link-96.png" />
+    <None Include="List-96.png" />
+    <None Include="mobile\LogBox.qml" />
+    <None Include="res\qml\Examples\LogTextToFile.qml" />
+    <None Include="res\qml\Examples\MMXGui.qml" />
+    <None Include="res\qml\MainLoader.qml" />
+    <None Include="Male-96.png" />
+    <None Include="Man-96.png" />
+    <None Include="Man" />
+    <None Include="Map-96.png" />
+    <None Include="Math-96.png" />
+    <None Include="res\+theme_light\icons_textedit\Menu" />
+    <None Include="res\icons_textedit\Menu" />
+    <None Include="res\qml\Examples\Meters.qml" />
+    <None Include="Mixer-96.png" />
+    <None Include="mobile\MultiSettings.qml" />
+    <None Include="mobile\NrfPair.qml" />
+    <None Include="res\+theme_light\icons_textedit\Numbered" />
+    <None Include="res\icons_textedit\Numbered" />
+    <None Include="Off-96_2.png" />
+    <None Include="res\+theme_light\icons\Ok-96.png" />
+    <None Include="res\icons\Ok-96.png" />
+    <None Include="On-96_2.png" />
+    <None Include="res\+theme_light\icons\Online-96.png" />
+    <None Include="res\icons\Online-96.png" />
+    <None Include="res\+theme_light\icons\Open" />
+    <None Include="res\icons\Open" />
+    <None Include="res\+theme_light\icons_textedit\Outdent-96.png" />
+    <None Include="res\icons_textedit\Outdent-96.png" />
+    <None Include="res\+theme_light\icons\Outgoing" />
+    <None Include="res\icons\Outgoing" />
+    <None Include="mobile\PairingDialog.qml" />
+    <None Include="mobile\ParamEditBool.qml" />
+    <None Include="mobile\ParamEditDouble.qml" />
+    <None Include="mobile\ParamEditEnum.qml" />
+    <None Include="mobile\ParamEditInt.qml" />
+    <None Include="mobile\ParamEditSeparator.qml" />
+    <None Include="mobile\ParamEditString.qml" />
+    <None Include="mobile\ParamEditors.qml" />
+    <None Include="mobile\ParamList.qml" />
+    <None Include="mobile\ParamListScroll.qml" />
+    <None Include="res\qml\Examples\ParentTabBar.qml" />
+    <None Include="res\+theme_light\icons_textedit\Paste-96.png" />
+    <None Include="res\icons_textedit\Paste-96.png" />
+    <None Include="Play-96.png" />
+    <None Include="res\+theme_light\icons\Plus" />
+    <None Include="res\icons\Plus" />
+    <None Include="res\qml\Examples\PollValues.qml" />
+    <None Include="res\+theme_light\icons\Polyline-96.png" />
+    <None Include="res\icons\Polyline-96.png" />
+    <None Include="res\qml\Examples\PositionControl.qml" />
+    <None Include="res\+theme_light\icons\Potentiometer-96.png" />
+    <None Include="res\icons\Potentiometer-96.png" />
+    <None Include="mobile\PpmMap.qml" />
+    <None Include="res\+theme_light\icons\Process-96.png" />
+    <None Include="res\icons\Process-96.png" />
+    <None Include="mobile\ProfileDisplay.qml" />
+    <None Include="mobile\ProfileEditor.qml" />
+    <None Include="mobile\Profiles.qml" />
+    <None Include="res\qml\Examples\Profiles.qml" />
+    <None Include="res\qml\Examples\Reconnect.qml" />
+    <None Include="res\+theme_light\icons_textedit\Redo-96.png" />
+    <None Include="res\icons_textedit\Redo-96.png" />
+    <None Include="res\+theme_light\icons\Refresh-96.png" />
+    <None Include="res\icons\Refresh-96.png" />
+    <None Include="res\+theme_light\icons\Restart-96.png" />
+    <None Include="res\icons\Restart-96.png" />
+    <None Include="Right-96.png" />
+    <None Include="res\fonts\Roboto\Roboto-Black.ttf" />
+    <None Include="res\fonts\Roboto\Roboto-BlackItalic.ttf" />
+    <None Include="res\fonts\Roboto\Roboto-Bold.ttf" />
+    <None Include="res\fonts\Roboto\Roboto-BoldItalic.ttf" />
+    <None Include="res\fonts\Roboto\Roboto-Italic.ttf" />
+    <None Include="res\fonts\Roboto\Roboto-Light.ttf" />
+    <None Include="res\fonts\Roboto\Roboto-LightItalic.ttf" />
+    <None Include="res\fonts\Roboto\Roboto-Medium.ttf" />
+    <None Include="res\fonts\Roboto\Roboto-MediumItalic.ttf" />
+    <None Include="res\fonts\Roboto\Roboto-Regular.ttf" />
+    <None Include="res\fonts\Roboto\Roboto-Thin.ttf" />
+    <None Include="res\fonts\Roboto\Roboto-ThinItalic.ttf" />
+    <None Include="res\fonts\Roboto\RobotoMono-VariableFont_wght.ttf" />
+    <None Include="res\+theme_light\icons\Rs" />
+    <None Include="res\icons\Rs" />
+    <None Include="mobile\RtData.qml" />
+    <None Include="res\qml\Examples\RtData.qml" />
+    <None Include="mobile\RtDataBalance.qml" />
+    <None Include="mobile\RtDataIMU.qml" />
+    <None Include="mobile\RtDataSetup.qml" />
+    <None Include="res\qml\Examples\RtDataSetup.qml" />
+    <None Include="res\+theme_light\icons\Save-96.png" />
+    <None Include="res\icons\Save-96.png" />
+    <None Include="res\+theme_light\icons\Save" />
+    <None Include="res\icons\Save" />
+    <None Include="res\+theme_light\icons\Send" />
+    <None Include="res\icons\Send" />
+    <None Include="res\+theme_light\icons\Settings-96.png" />
+    <None Include="res\icons\Settings-96.png" />
+    <None Include="mobile\Settings.qml" />
+    <None Include="Settings" />
+    <None Include="res\qml\SetupMotorWindow.qml" />
+    <None Include="mobile\SetupWizardFoc.qml" />
+    <None Include="mobile\SetupWizardInput.qml" />
+    <None Include="mobile\SetupWizardIntro.qml" />
+    <None Include="res\+theme_light\icons\Shutdown-96.png" />
+    <None Include="res\icons\Shutdown-96.png" />
+    <None Include="Sign-96.png" />
+    <None Include="res\+theme_light\icons\Speed-96.png" />
+    <None Include="res\icons\Speed-96.png" />
+    <None Include="mobile\StartPage.qml" />
+    <None Include="mobile\StatPage.qml" />
+    <None Include="res\+theme_light\icons\Stop-96.png" />
+    <None Include="res\icons\Stop-96.png" />
+    <None Include="res\+theme_light\icons\Stop" />
+    <None Include="res\icons\Stop" />
+    <None Include="res\+theme_light\icons_textedit\Strikethrough-96.png" />
+    <None Include="res\icons_textedit\Strikethrough-96.png" />
+    <None Include="mobile\TcpBox.qml" />
+    <None Include="res\qml\Examples\TcpServer.qml" />
+    <None Include="mobile\Terminal.qml" />
+    <None Include="res\+theme_light\icons_textedit\Text" />
+    <None Include="res\icons_textedit\Text" />
+    <None Include="res\+theme_light\icons\Toggle" />
+    <None Include="res\icons\Toggle" />
+    <None Include="res\+theme_light\icons_textedit\Undo-96.png" />
+    <None Include="res\icons_textedit\Undo-96.png" />
+    <None Include="res\+theme_light\icons\Up-96.png" />
+    <None Include="res\icons\Up-96.png" />
+    <None Include="res\+theme_light\icons\Upload-96.png" />
+    <None Include="res\icons\Upload-96.png" />
+    <None Include="res\+theme_light\icons\User" />
+    <None Include="res\icons\User" />
+    <None Include="res\firmwares\410_o_411_o_412\VESC_0005ohm.bin" />
+    <None Include="res\firmwares\46_o_47\VESC_0005ohm.bin" />
+    <None Include="res\firmwares\46_o_47\VESC_33k.bin" />
+    <None Include="res\firmwares\100_250\VESC_default.bin" />
+    <None Include="res\firmwares\100_500\VESC_default.bin" />
+    <None Include="res\firmwares\410_o_411_o_412\VESC_default.bin" />
+    <None Include="res\firmwares\46_o_47\VESC_default.bin" />
+    <None Include="res\firmwares\48\VESC_default.bin" />
+    <None Include="res\firmwares\60\VESC_default.bin" />
+    <None Include="res\firmwares\60_MK3\VESC_default.bin" />
+    <None Include="res\firmwares\60_MK4\VESC_default.bin" />
+    <None Include="res\firmwares\60_MK5\VESC_default.bin" />
+    <None Include="res\firmwares\60v2_alva\VESC_default.bin" />
+    <None Include="res\firmwares\75_300\VESC_default.bin" />
+    <None Include="res\firmwares\75_300_R2\VESC_default.bin" />
+    <None Include="res\firmwares\75_300_R3\VESC_default.bin" />
+    <None Include="res\firmwares\Cheap_FOCer_2\VESC_default.bin" />
+    <None Include="res\firmwares\HD60\VESC_default.bin" />
+    <None Include="res\firmwares\HD75\VESC_default.bin" />
+    <None Include="res\firmwares\Little_FOCer\VESC_default.bin" />
+    <None Include="res\firmwares\Raiden7\VESC_default.bin" />
+    <None Include="res\firmwares\STORMCORE_100DX\VESC_default.bin" />
+    <None Include="res\firmwares\STORMCORE_100D\VESC_default.bin" />
+    <None Include="res\firmwares\STORMCORE_100D_V2\VESC_default.bin" />
+    <None Include="res\firmwares\STORMCORE_100S\VESC_default.bin" />
+    <None Include="res\firmwares\STORMCORE_60D+\VESC_default.bin" />
+    <None Include="res\firmwares\STORMCORE_60D\VESC_default.bin" />
+    <None Include="res\firmwares\STORMCORE_60Dxs\VESC_default.bin" />
+    <None Include="res\firmwares\UAVC_OMEGA\VESC_default.bin" />
+    <None Include="res\firmwares\UBOX_SINGLE\VESC_default.bin" />
+    <None Include="res\firmwares\UNITY\VESC_default.bin" />
+    <None Include="res\firmwares\UXV_SR\VESC_default.bin" />
+    <None Include="res\firmwares\Warrior6\VESC_default.bin" />
+    <None Include="res\firmwares\100_250\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\100_500\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\410_o_411_o_412\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\60\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\60_MK3\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\60_MK4\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\60_MK5\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\75_300\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\75_300_R2\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\75_300_R3\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\HD60\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\HD75\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\Little_FOCer\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\STORMCORE_100DX\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\STORMCORE_100D\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\STORMCORE_100D_V2\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\STORMCORE_100S\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\STORMCORE_60D+\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\STORMCORE_60D\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\STORMCORE_60Dxs\VESC_default_no_hw_limits.bin" />
+    <None Include="res\firmwares\UNITY\VESC_default_no_hw_limits.bin" />
+    <None Include="mobile\Vesc3DView.qml" />
+    <None Include="Warning-96.png" />
+    <None Include="res\+theme_light\icons\Waypoint" />
+    <None Include="res\icons\Waypoint" />
+    <None Include="res\qml\WelcomeQmlPanel.qml" />
+    <None Include="res\+theme_light\icons\Wii-96.png" />
+    <None Include="res\icons\Wii-96.png" />
+    <None Include="res\+theme_light\icons\Wizard-96.png" />
+    <None Include="res\icons\Wizard-96.png" />
+    <None Include="res\+theme_light\icons\alive_off.png" />
+    <None Include="res\icons\alive_off.png" />
+    <None Include="res\+theme_light\icons\alive_on.png" />
+    <None Include="res\icons\alive_on.png" />
+    <None Include="res\+theme_light\icons\app_default.png" />
+    <None Include="res\icons\app_default.png" />
+    <None Include="res\+theme_light\icons\app_down.png" />
+    <None Include="res\icons\app_down.png" />
+    <None Include="res\+theme_light\icons\app_up.png" />
+    <None Include="res\icons\app_up.png" />
+    <None Include="res\+theme_light\icons\appconf.png" />
+    <None Include="res\icons\appconf.png" />
+    <None Include="res\+theme_light\icons\apply.png" />
+    <None Include="res\icons\apply.png" />
+    <None Include="res\+theme_light\icons\arrow_down.png" />
+    <None Include="res\icons\arrow_down.png" />
+    <None Include="res\+theme_light\icons\arrow_l.png" />
+    <None Include="res\icons\arrow_l.png" />
+    <None Include="res\+theme_light\icons\arrow_r.png" />
+    <None Include="res\icons\arrow_r.png" />
+    <None Include="res\+theme_light\icons\arrow_up.png" />
+    <None Include="res\icons\arrow_up.png" />
+    <None Include="as-96.png" />
+    <None Include="res\bg.png" />
+    <None Include="res\+theme_light\icons\bldc.png" />
+    <None Include="res\icons\bldc.png" />
+    <None Include="res\+theme_light\icons\bluetooth.png" />
+    <None Include="res\icons\bluetooth.png" />
+    <None Include="res\+theme_light\icons\bms_off.png" />
+    <None Include="res\icons\bms_off.png" />
+    <None Include="res\+theme_light\icons\bms_on.png" />
+    <None Include="res\icons\bms_on.png" />
+    <None Include="res\+theme_light\icons\can_off.png" />
+    <None Include="res\icons\can_off.png" />
+    <None Include="res\+theme_light\icons\can_on.png" />
+    <None Include="res\icons\can_on.png" />
+    <None Include="res\+theme_light\icons\collapse_off.png" />
+    <None Include="res\icons\collapse_off.png" />
+    <None Include="res\+theme_light\icons\collapse_on.png" />
+    <None Include="res\icons\collapse_on.png" />
+    <None Include="QCodeEditor\resources\languages\cpp.xml" />
+    <None Include="QCodeEditor\resources\dark_style.xml" />
+    <None Include="QCodeEditor\resources\default_style.xml" />
+    <None Include="res\images\motors\ebike_dd_1kw.jpg" />
+    <None Include="res\images\ebike_throttle.jpg" />
+    <None Include="res\images\motors\edf_small.jpg" />
+    <None Include="res\images\esk8.jpg" />
+    <None Include="res\icons\exit.png" />
+    <None Include="res\+theme_light\icons\expand_off.png" />
+    <None Include="res\icons\expand_off.png" />
+    <None Include="res\+theme_light\icons\expand_on.png" />
+    <None Include="res\icons\expand_on.png" />
+    <None Include="res\+theme_light\icons\expand_v_off.png" />
+    <None Include="res\icons\expand_v_off.png" />
+    <None Include="res\+theme_light\icons\expand_v_on.png" />
+    <None Include="res\icons\expand_v_on.png" />
+    <None Include="res\icons\fullscreen.png" />
+    <None Include="res\config\fw.xml" />
+    <None Include="res\bootloaders\generic.bin" />
+    <None Include="res\bootloaders_bms\generic.bin" />
+    <None Include="QCodeEditor\resources\languages\glsl.xml" />
+    <None Include="res\+theme_light\icons\ic_folder_open_black_48dp.png" />
+    <None Include="res\icons\ic_folder_open_black_48dp.png" />
+    <None Include="res\+theme_light\icons\ic_insert_drive_file_black_48dp.png" />
+    <None Include="res\icons\ic_insert_drive_file_black_48dp.png" />
+    <None Include="res\+theme_light\icons\icons8-battery-100.png" />
+    <None Include="res\icons\icons8-battery-100.png" />
+    <None Include="res\+theme_light\icons\icons8-edit-96.png" />
+    <None Include="res\icons\icons8-edit-96.png" />
+    <None Include="res\+theme_light\icons\icons8-fantasy-96.png" />
+    <None Include="res\icons\icons8-fantasy-96.png" />
+    <None Include="res\+theme_light\icons\icons8-target-96.png" />
+    <None Include="res\icons\icons8-target-96.png" />
+    <None Include="res\+theme_light\icons\imu_off.png" />
+    <None Include="res\icons\imu_off.png" />
+    <None Include="res\+theme_light\icons\imu_on.png" />
+    <None Include="res\icons\imu_on.png" />
+    <None Include="res\config\3.55\info.xml" />
+    <None Include="res\config\3.56\info.xml" />
+    <None Include="res\config\3.57\info.xml" />
+    <None Include="res\config\3.58\info.xml" />
+    <None Include="res\config\3.59\info.xml" />
+    <None Include="res\config\3.60\info.xml" />
+    <None Include="res\config\3.61\info.xml" />
+    <None Include="res\config\3.62\info.xml" />
+    <None Include="res\config\3.63\info.xml" />
+    <None Include="res\config\3.64\info.xml" />
+    <None Include="res\config\3.65\info.xml" />
+    <None Include="res\config\3.66\info.xml" />
+    <None Include="res\config\4.00\info.xml" />
+    <None Include="res\config\4.01\info.xml" />
+    <None Include="res\config\4.02\info.xml" />
+    <None Include="res\config\5.00\info.xml" />
+    <None Include="res\config\5.01\info.xml" />
+    <None Include="res\config\5.02\info.xml" />
+    <None Include="res\config\5.03\info.xml" />
+    <None Include="res\images\motors\inrunner_medium.jpg" />
+    <None Include="res\images\motors\inrunner_small.jpg" />
+    <None Include="res\+theme_light\icons\keys_off.png" />
+    <None Include="res\icons\keys_off.png" />
+    <None Include="res\+theme_light\icons\keys_on.png" />
+    <None Include="res\icons\keys_on.png" />
+    <None Include="res\+theme_light\icons\lambda.png" />
+    <None Include="res\icons\lambda.png" />
+    <None Include="res\+theme_light\logo.png" />
+    <None Include="res\logo.png" />
+    <None Include="res\+theme_light\logo_vertical.png" />
+    <None Include="res\logo_vertical.png" />
+    <None Include="QCodeEditor\resources\languages\lua.xml" />
+    <None Include="mobile\main.qml" />
+    <None Include="res\+theme_light\icons\mcconf.png" />
+    <None Include="res\icons\mcconf.png" />
+    <None Include="res\icons\minimize.png" />
+    <None Include="res\+theme_light\icons\motor.png" />
+    <None Include="res\icons\motor.png" />
+    <None Include="res\+theme_light\icons\motor_default.png" />
+    <None Include="res\icons\motor_default.png" />
+    <None Include="res\+theme_light\icons\motor_down.png" />
+    <None Include="res\icons\motor_down.png" />
+    <None Include="res\+theme_light\icons\motor_side.png" />
+    <None Include="res\icons\motor_side.png" />
+    <None Include="res\+theme_light\icons\motor_up.png" />
+    <None Include="res\icons\motor_up.png" />
+    <None Include="res\images\multi_master.png" />
+    <None Include="res\images\multi_single.png" />
+    <None Include="res\images\multi_slave.png" />
+    <None Include="res\+theme_light\version\neutral_v.svg" />
+    <None Include="res\version\neutral_v.svg" />
+    <None Include="res\+theme_light\version\neutral_vesc_tool.png" />
+    <None Include="res\version\neutral_vesc_tool.png" />
+    <None Include="res\other_fw\nrf51_remote_mt_32k_32m.bin" />
+    <None Include="res\other_fw\nrf51_vesc_ble_16k_16m_rx11_tx9_led3.bin" />
+    <None Include="res\other_fw\nrf51_vesc_ble_16k_16m_rx1_tx2_led3.bin" />
+    <None Include="res\other_fw\nrf51_vesc_ble_32k_16m_rx11_tx9_led3.bin" />
+    <None Include="res\other_fw\nrf51_vesc_ble_32k_32m_rx1_tx2_led3.bin" />
+    <None Include="res\other_fw\nrf51_vesc_ble_32k_32m_rx2_tx1_led3.bin" />
+    <None Include="res\other_fw\nrf52832_vesc_ble_rx6_tx7_led8.bin" />
+    <None Include="res\other_fw\nrf52832_vesc_ble_rx7_tx6_led8.bin" />
+    <None Include="res\other_fw\nrf52840_stick_remote.bin" />
+    <None Include="res\other_fw\nrf52840_stormcore_ble_rx31_tx30_led5.bin" />
+    <None Include="res\other_fw\nrf52840_vesc_ble_rx11_tx8_led7.bin" />
+    <None Include="res\other_fw\nrf52840_vesc_ble_rx26_tx25_led27.bin" />
+    <None Include="res\images\nunchuk.jpg" />
+    <None Include="res\images\motors\outrunner_mini.jpg" />
+    <None Include="res\images\motors\outrunner_small.jpg" />
+    <None Include="res\config\3.55\parameters_appconf.xml" />
+    <None Include="res\config\3.56\parameters_appconf.xml" />
+    <None Include="res\config\3.57\parameters_appconf.xml" />
+    <None Include="res\config\3.58\parameters_appconf.xml" />
+    <None Include="res\config\3.59\parameters_appconf.xml" />
+    <None Include="res\config\3.60\parameters_appconf.xml" />
+    <None Include="res\config\3.61\parameters_appconf.xml" />
+    <None Include="res\config\3.62\parameters_appconf.xml" />
+    <None Include="res\config\3.63\parameters_appconf.xml" />
+    <None Include="res\config\3.64\parameters_appconf.xml" />
+    <None Include="res\config\3.65\parameters_appconf.xml" />
+    <None Include="res\config\3.66\parameters_appconf.xml" />
+    <None Include="res\config\4.00\parameters_appconf.xml" />
+    <None Include="res\config\4.01\parameters_appconf.xml" />
+    <None Include="res\config\4.02\parameters_appconf.xml" />
+    <None Include="res\config\5.00\parameters_appconf.xml" />
+    <None Include="res\config\5.01\parameters_appconf.xml" />
+    <None Include="res\config\5.02\parameters_appconf.xml" />
+    <None Include="res\config\5.03\parameters_appconf.xml" />
+    <None Include="res\config\3.55\parameters_mcconf.xml" />
+    <None Include="res\config\3.56\parameters_mcconf.xml" />
+    <None Include="res\config\3.57\parameters_mcconf.xml" />
+    <None Include="res\config\3.58\parameters_mcconf.xml" />
+    <None Include="res\config\3.59\parameters_mcconf.xml" />
+    <None Include="res\config\3.60\parameters_mcconf.xml" />
+    <None Include="res\config\3.61\parameters_mcconf.xml" />
+    <None Include="res\config\3.62\parameters_mcconf.xml" />
+    <None Include="res\config\3.63\parameters_mcconf.xml" />
+    <None Include="res\config\3.64\parameters_mcconf.xml" />
+    <None Include="res\config\3.65\parameters_mcconf.xml" />
+    <None Include="res\config\3.66\parameters_mcconf.xml" />
+    <None Include="res\config\4.00\parameters_mcconf.xml" />
+    <None Include="res\config\4.01\parameters_mcconf.xml" />
+    <None Include="res\config\4.02\parameters_mcconf.xml" />
+    <None Include="res\config\5.00\parameters_mcconf.xml" />
+    <None Include="res\config\5.01\parameters_mcconf.xml" />
+    <None Include="res\config\5.02\parameters_mcconf.xml" />
+    <None Include="res\config\5.03\parameters_mcconf.xml" />
+    <None Include="res\images\propeller.jpg" />
+    <None Include="QCodeEditor\resources\languages\python.xml" />
+    <QtRcc Include="QCodeEditor\resources\qcodeeditor_resources.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">qcodeeditor_resources</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">qcodeeditor_resources</InitFuncName>
+    </QtRcc>
+    <QtRcc Include="mobile\qml.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">qml</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">qml</InitFuncName>
+    </QtRcc>
+    <None Include="QCodeEditor\resources\languages\qml.xml" />
+    <None Include="mobile\qtquickcontrols2.conf" />
+    <None Include="mobile\qtquickcontrols2_dark.conf" />
+    <None Include="res\images\rc_rx.jpg" />
+    <QtRcc Include="res.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">res</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">res</InitFuncName>
+    </QtRcc>
+    <QtRcc Include="res_config.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">res_config</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">res_config</InitFuncName>
+    </QtRcc>
+    <QtRcc Include="res_fw.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">res_fw</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">res_fw</InitFuncName>
+    </QtRcc>
+    <QtRcc Include="res_fw_bms.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">res_fw_bms</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">res_fw_bms</InitFuncName>
+    </QtRcc>
+    <QtRcc Include="res_neutral.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">res_neutral</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">res_neutral</InitFuncName>
+    </QtRcc>
+    <QtRcc Include="res_qml.qrc">
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Release|x64'">res_qml</InitFuncName>
+      <InitFuncName Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">res_qml</InitFuncName>
+    </QtRcc>
+    <None Include="res\+theme_light\icons\rl.png" />
+    <None Include="res\icons\rl.png" />
+    <None Include="res\+theme_light\icons\rt_app_off.png" />
+    <None Include="res\icons\rt_app_off.png" />
+    <None Include="res\+theme_light\icons\rt_app_on.png" />
+    <None Include="res\icons\rt_app_on.png" />
+    <None Include="res\+theme_light\icons\rt_off.png" />
+    <None Include="res\icons\rt_off.png" />
+    <None Include="res\+theme_light\icons\rt_on.png" />
+    <None Include="res\icons\rt_on.png" />
+    <None Include="res\+theme_light\icons\sampl_trigger_start.png" />
+    <None Include="res\icons\sampl_trigger_start.png" />
+    <None Include="res\+theme_light\icons\sample_trigger_fault.png" />
+    <None Include="res\icons\sample_trigger_fault.png" />
+    <None Include="res\+theme_light\icons\sample_trigger_fault_nosend.png" />
+    <None Include="res\icons\sample_trigger_fault_nosend.png" />
+    <None Include="res\+theme_light\icons\sample_trigger_start_nosend.png" />
+    <None Include="res\icons\sample_trigger_start_nosend.png" />
+    <None Include="res\+theme_light\icons\size_off.png" />
+    <None Include="res\icons\size_off.png" />
+    <None Include="res\+theme_light\icons\size_on.png" />
+    <None Include="res\icons\size_on.png" />
+    <None Include="res\images\slider1.png" />
+    <None Include="res\+theme_light\icons\stormcore-96.png" />
+    <None Include="res\icons\stormcore-96.png" />
+    <None Include="res\images\v6plus_top.png" />
+    <None Include="res\+theme_light\icons\v_icon-256.png" />
+    <None Include="res\icons\v_icon-256.png" />
+    <None Include="res\+theme_light\icons\v_icon-96.png" />
+    <None Include="res\icons\v_icon-96.png" />
+    <None Include="res\images\vedder_nunchuk.jpg" />
+    <None Include="res\+theme_light\icons\vesc-96.png" />
+    <None Include="res\icons\vesc-96.png" />
+    <None Include="res\firmwares_bms\12s7p\vesc_default.bin" />
+    <None Include="res\firmwares_bms\18s_light\vesc_default.bin" />
+    <None Include="res\other_fw\vesc_power_switch_120.bin" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="android\AndroidManifest.xml" />
+    <None Include="android\src\com\vedder\vesc\Utils.java" />
+    <None Include="android\src\com\vedder\vesc\VForegroundService.java" />
+    <None Include="android\build.gradle" />
+    <None Include="android\gradle\wrapper\gradle-wrapper.jar" />
+    <None Include="android\gradle\wrapper\gradle-wrapper.properties" />
+    <None Include="android\gradlew.bat" />
+    <None Include="android\gradlew" />
+    <None Include="android\res\values\libs.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
+    <Import Project="$(QtMsBuild)\qt.targets" />
+  </ImportGroup>
+  <ImportGroup Label="ExtensionTargets" />
+</Project>

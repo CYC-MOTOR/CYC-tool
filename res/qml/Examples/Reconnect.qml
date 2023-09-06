@@ -1,23 +1,23 @@
 // This example attempts to reconnect when the connection is lost and upload the motor
-// configuration afterwards. It is useful during firmware development to keep VESC Tool
+// configuration afterwards. It is useful during firmware development to keep EBMX Tool
 // connected and the configuration updated.
 
 import QtQuick 2.5
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
-import Vedder.vesc.utility 1.0
-import Vedder.vesc.commands 1.0
-import Vedder.vesc.configparams 1.0
+import Vedder.EBMX.utility 1.0
+import Vedder.EBMX.commands 1.0
+import Vedder.EBMX.configparams 1.0
 import "qrc:/mobile"
 
 Item {
     anchors.fill: parent
     anchors.margins: 10
     
-    property Commands mCommands: VescIf.commands()
-    property ConfigParams mMcConf: VescIf.mcConfig()
-    property ConfigParams mAppConf: VescIf.appConfig()
+    property Commands mCommands: EBMXIf.commands()
+    property ConfigParams mMcConf: EBMXIf.mcConfig()
+    property ConfigParams mAppConf: EBMXIf.appConfig()
     
     Timer {
         running: true
@@ -27,8 +27,8 @@ Item {
         property bool wasConnected: true
                 
         onTriggered: {
-            if (!VescIf.isPortConnected()) {
-                VescIf.reconnectLastPort()
+            if (!EBMXIf.isPortConnected()) {
+                EBMXIf.reconnectLastPort()
                 wasConnected = false
             } else {
                 if (!wasConnected) {

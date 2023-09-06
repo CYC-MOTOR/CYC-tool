@@ -1,0 +1,2947 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Form Files">
+      <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
+      <Extensions>ui</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Generated Files">
+      <UniqueIdentifier>{71ED8ED8-ACB9-4CE9-BBE1-E00B30144E11}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;moc;h;def;odl;idl;res;</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{D9D6E242-F8AF-46E4-B9FD-80ECBC20BA3E}</UniqueIdentifier>
+      <Extensions>qrc;*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+    <Filter Include="Distribution Files">
+      <UniqueIdentifier>{B83CAF91-C7BF-462F-B76C-EA11631F866C}</UniqueIdentifier>
+      <Extensions>*</Extensions>
+      <ParseFiles>false</ParseFiles>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="QCodeEditor\src\internal\QCXXHighlighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QCodeEditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QFramedTextAttribute.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QGLSLCompleter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QGLSLHighlighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QJSONHighlighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QLanguage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QLineNumberArea.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QLuaCompleter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QLuaHighlighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QPythonCompleter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QPythonHighlighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QStyleSyntaxHighlighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QSyntaxStyle.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QVescCompleter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QXMLHighlighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="QCodeEditor\src\internal\QmlHighlighter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\adcmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\aspectimglabel.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\batterycalculator.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\batttempplot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\canlistitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="map\carinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="commands.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="configparam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="configparams.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="map\copterinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\detectallfocdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\detectbldc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\detectfoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\detectfocencoder.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\detectfochall.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\detectimu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="digitalfiltering.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\dirsetup.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\displaybar.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\displaypercentage.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mobile\fwhelper.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\helpdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="hexfile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\historylineedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\imagewidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="map\locpoint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mobile\logreader.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mobile\logwriter.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="lzokay\lzokay.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mainwindow.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="map\mapwidget.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\mrichtextedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\mtextedit.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\nrfpair.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="map\osmclient.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="map\osmtile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="packet.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageappadc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageappbalance.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageappgeneral.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageappimu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageappnrf.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageappnunchuk.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageapppas.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageappppm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageappsettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageappuart.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagebldc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagebms.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagecananalyzer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageconnection.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagecontrollers.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagecustomconfig.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagedataanalysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagedc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagedebugprint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageexperiments.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagefirmware.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagefoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagegpd.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageimu.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\pagelistitem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageloganalysis.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagemotor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagemotorcomparison.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagemotorinfo.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagemotorsettings.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagertdata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagesampleddata.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagescripting.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagesetupcalculators.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageswdprog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pageterminal.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="pages\pagewelcome.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\paramdialog.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\parameditbool.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\parameditdouble.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\parameditenum.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\parameditint.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\parameditstring.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="parametereditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\paramtable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="map\perspectivepixmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\ppmmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="preferences.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\qcustomplot.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\qmleditor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mobile\qmlui.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\rtdatatext.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="setupwizardapp.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="setupwizardmotor.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="startupwizard.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\superslider.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="tcpserversimple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="udpserversimple.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="utility.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vbytearray.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="mobile\vesc3ditem.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\vesc3dview.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vescinterface.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="widgets\vtextbrowser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="QCodeEditor\include\internal\QCXXHighlighter.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QCodeEditor.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QFramedTextAttribute.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QGLSLCompleter.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QGLSLHighlighter.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="QCodeEditor\include\internal\QHighlightBlockRule.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="QCodeEditor\include\internal\QHighlightRule.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="QCodeEditor\include\internal\QJSONHighlighter.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QLanguage.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QLineNumberArea.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QLuaCompleter.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QLuaHighlighter.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QPythonCompleter.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QPythonHighlighter.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="QCodeEditor\include\internal\QStyleSyntaxHighlighter.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="QCodeEditor\include\internal\QSyntaxStyle.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QVescCompleter.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QXMLHighlighter.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="QCodeEditor\include\internal\QmlHighlighter.hpp">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\adcmap.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\aspectimglabel.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\batterycalculator.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\batttempplot.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\canlistitem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="map\carinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="commands.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="configparam.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="configparams.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="map\copterinfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="datatypes.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\detectallfocdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\detectbldc.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\detectfoc.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\detectfocencoder.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\detectfochall.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\detectimu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="digitalfiltering.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="widgets\dirsetup.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\displaybar.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\displaypercentage.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mobile\fwhelper.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\helpdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="hexfile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="widgets\historylineedit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="widgets\imagewidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="map\locpoint.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="mobile\logreader.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mobile\logwriter.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="lzokay\lzokay.hpp">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="mainwindow.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="map\mapwidget.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\mrichtextedit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\mtextedit.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\nrfpair.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="map\osmclient.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="map\osmtile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="packet.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageappadc.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageappbalance.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageappgeneral.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageappimu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageappnrf.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageappnunchuk.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageapppas.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageappppm.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageappsettings.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageappuart.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagebldc.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagebms.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagecananalyzer.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageconnection.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagecontrollers.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagecustomconfig.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagedataanalysis.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagedc.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagedebugprint.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageexperiments.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagefirmware.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagefoc.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagegpd.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageimu.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\pagelistitem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageloganalysis.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagemotor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagemotorcomparison.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagemotorinfo.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagemotorsettings.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagertdata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagesampleddata.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagescripting.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagesetupcalculators.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageswdprog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pageterminal.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="pages\pagewelcome.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\paramdialog.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\parameditbool.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\parameditdouble.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\parameditenum.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\parameditint.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\parameditstring.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="parametereditor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="widgets\paramtable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="map\perspectivepixmap.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="widgets\ppmmap.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="preferences.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\qcustomplot.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\qmleditor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="mobile\qmlui.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\rtdatatext.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="setupwizardapp.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="setupwizardmotor.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="startupwizard.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\superslider.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="tcpserversimple.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="udpserversimple.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="utility.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <ClInclude Include="vbytearray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <QtMoc Include="mobile\vesc3ditem.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\vesc3dview.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="vescinterface.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+    <QtMoc Include="widgets\vtextbrowser.h">
+      <Filter>Header Files</Filter>
+    </QtMoc>
+  </ItemGroup>
+  <ItemGroup>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    <CustomBuild Include="debug\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    <CustomBuild Include="release\moc_predefs.h.cbt">
+      <Filter>Generated Files</Filter>
+    </CustomBuild>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+  </ItemGroup>
+  <ItemGroup>
+    <QtUic Include="widgets\adcmap.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\batterycalculator.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\detectallfocdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\detectbldc.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\detectfoc.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\detectfocencoder.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\detectfochall.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\detectimu.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\dirsetup.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\helpdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="mainwindow.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\mrichtextedit.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\nrfpair.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageappadc.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageappbalance.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageappgeneral.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageappimu.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageappnrf.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageappnunchuk.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageapppas.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageappppm.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageappsettings.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageappuart.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagebldc.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagebms.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagecananalyzer.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageconnection.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagecontrollers.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagecustomconfig.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagedataanalysis.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagedc.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagedebugprint.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageexperiments.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagefirmware.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagefoc.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagegpd.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageimu.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageloganalysis.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagemotor.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagemotorcomparison.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagemotorinfo.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagemotorsettings.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagertdata.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagesampleddata.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagescripting.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagesetupcalculators.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageswdprog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pageterminal.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="pages\pagewelcome.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\paramdialog.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\parameditbool.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\parameditdouble.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\parameditenum.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\parameditint.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\parameditstring.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="parametereditor.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\ppmmap.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="preferences.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+    <QtUic Include="widgets\qmleditor.ui">
+      <Filter>Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\images\12s7p_pcb.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="2-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="232">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\3ph_sine.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\3ph_sine.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bootloaders\40_o_47_o_48_o_410_o_411_o_412_o_DAS_RS.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bootloaders\60_o_75_300_o_HD60_o_UAVC_OMEGA_o_75_300_R2_o_60_MK3_o_100_250_o_75_300_R3_o_60_MK4_o_60_MK5_o_HD75.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\motors\6374.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\About-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\About-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\AdcMap.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Add">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Add">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Align">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Align">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Anchor-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Anchor-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\BMS.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\BMS.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Backup-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Battery-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Bold-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Bold-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\BrakeBench.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Brake">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Brake">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Bug-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Bug-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Bulleted">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Bulleted">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\CHANGELOG">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\CHANGELOG">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Calculator-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Calculator-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\CanDebugger.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\CanScreen.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Cancel-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Cancel-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Car">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Car">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Center-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Chart-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Circled">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Circled">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Color-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ConfigPageApp.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ConfigPageMotor.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ConnectScreen.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Connected-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Connected-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Console-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Console-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Controller-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Controller-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Controller-96_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Controller-96_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\Controls.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\Controls.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Copy-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Copy-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\CustomGauge.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\CustomGaugeV2.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Cut-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Cut-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Data-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Data">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Data">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\DejaVuSans-Bold.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\DejaVuSans-BoldOblique.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\DejaVuSans-Oblique.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\DejaVuSans.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\DejaVuSansMono-Bold.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\DejaVuSansMono-BoldOblique.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\DejaVuSansMono-Oblique.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\DejaVuSansMono.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Delete-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Delete-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\DetectBldc.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\DetectFocEncoder.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\DetectFocHall.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\DetectFocParam.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\DetectIMU.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\DirectionSetup.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\DirectoryPicker.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Disconnected-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Disconnected-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\DoubleSpinBox.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Down-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Down-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Download-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Download-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\DynamicLoader.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\EUC-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\EUC-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Electronics-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Electronics-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Exan-Regular.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\ExperimentPlot.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="File-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\FilePicker.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Fill">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Fill">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Folder-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\FwUpdate.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\GaugeTest.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Group">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Gyroscope-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Gyroscope-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Help-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Help-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Home-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Home-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Horizontal">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Horizontal">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Image-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ImageButton.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Indent-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Indent-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\IoBoard.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Italic-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Italic-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Justify-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Left-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Line">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Line">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Link-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Link-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="List-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\LogBox.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\LogTextToFile.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\MMXGui.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\MainLoader.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Male-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Man-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Man">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Map-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Math-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Menu">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Menu">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\Meters.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Mixer-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\MultiSettings.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\NrfPair.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Numbered">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Numbered">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Off-96_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Ok-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Ok-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="On-96_2.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Online-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Online-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Open">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Open">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Outdent-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Outdent-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Outgoing">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Outgoing">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\PairingDialog.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ParamEditBool.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ParamEditDouble.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ParamEditEnum.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ParamEditInt.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ParamEditSeparator.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ParamEditString.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ParamEditors.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ParamList.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ParamListScroll.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\ParentTabBar.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Paste-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Paste-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Play-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Plus">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Plus">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\PollValues.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Polyline-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Polyline-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\PositionControl.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Potentiometer-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Potentiometer-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\PpmMap.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Process-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Process-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ProfileDisplay.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\ProfileEditor.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\Profiles.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\Profiles.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\Reconnect.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Redo-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Redo-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Refresh-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Refresh-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Restart-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Restart-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Right-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\Roboto-Black.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\Roboto-BlackItalic.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\Roboto-Bold.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\Roboto-BoldItalic.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\Roboto-Italic.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\Roboto-Light.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\Roboto-LightItalic.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\Roboto-Medium.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\Roboto-MediumItalic.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\Roboto-Regular.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\Roboto-Thin.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\Roboto-ThinItalic.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\fonts\Roboto\RobotoMono-VariableFont_wght.ttf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Rs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Rs">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\RtData.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\RtData.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\RtDataBalance.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\RtDataIMU.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\RtDataSetup.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\RtDataSetup.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Save-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Save-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Save">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Save">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Send">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Send">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Settings-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Settings-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\Settings.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Settings">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\SetupMotorWindow.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\SetupWizardFoc.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\SetupWizardInput.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\SetupWizardIntro.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Shutdown-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Shutdown-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Sign-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Speed-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Speed-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\StartPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\StatPage.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Stop-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Stop-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Stop">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Stop">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Strikethrough-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Strikethrough-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\TcpBox.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\Examples\TcpServer.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\Terminal.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Text">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Text">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Toggle">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Toggle">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons_textedit\Undo-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons_textedit\Undo-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Up-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Up-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Upload-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Upload-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\User">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\User">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\410_o_411_o_412\VESC_0005ohm.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\46_o_47\VESC_0005ohm.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\46_o_47\VESC_33k.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\100_250\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\100_500\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\410_o_411_o_412\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\46_o_47\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\48\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\60\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\60_MK3\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\60_MK4\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\60_MK5\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\60v2_alva\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\75_300\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\75_300_R2\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\75_300_R3\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\Cheap_FOCer_2\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\HD60\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\HD75\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\Little_FOCer\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\Raiden7\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_100DX\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_100D\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_100D_V2\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_100S\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_60D+\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_60D\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_60Dxs\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\UAVC_OMEGA\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\UBOX_SINGLE\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\UNITY\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\UXV_SR\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\Warrior6\VESC_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\100_250\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\100_500\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\410_o_411_o_412\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\60\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\60_MK3\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\60_MK4\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\60_MK5\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\75_300\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\75_300_R2\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\75_300_R3\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\HD60\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\HD75\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\Little_FOCer\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_100DX\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_100D\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_100D_V2\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_100S\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_60D+\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_60D\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\STORMCORE_60Dxs\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares\UNITY\VESC_default_no_hw_limits.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\Vesc3DView.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="Warning-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Waypoint">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Waypoint">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\qml\WelcomeQmlPanel.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Wii-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Wii-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\Wizard-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\Wizard-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\alive_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\alive_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\alive_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\alive_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\app_default.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\app_default.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\app_down.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\app_down.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\app_up.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\app_up.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\appconf.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\appconf.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\apply.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\apply.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\arrow_down.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\arrow_down.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\arrow_l.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\arrow_l.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\arrow_r.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\arrow_r.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\arrow_up.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\arrow_up.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="as-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bg.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\bldc.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\bldc.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\bluetooth.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\bluetooth.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\bms_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\bms_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\bms_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\bms_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\can_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\can_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\can_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\can_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\collapse_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\collapse_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\collapse_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\collapse_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="QCodeEditor\resources\languages\cpp.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="QCodeEditor\resources\dark_style.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="QCodeEditor\resources\default_style.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\motors\ebike_dd_1kw.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\ebike_throttle.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\motors\edf_small.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\esk8.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\exit.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\expand_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\expand_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\expand_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\expand_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\expand_v_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\expand_v_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\expand_v_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\expand_v_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\fullscreen.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\fw.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bootloaders\generic.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\bootloaders_bms\generic.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="QCodeEditor\resources\languages\glsl.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\ic_folder_open_black_48dp.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\ic_folder_open_black_48dp.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\ic_insert_drive_file_black_48dp.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\ic_insert_drive_file_black_48dp.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\icons8-battery-100.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\icons8-battery-100.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\icons8-edit-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\icons8-edit-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\icons8-fantasy-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\icons8-fantasy-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\icons8-target-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\icons8-target-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\imu_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\imu_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\imu_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\imu_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.55\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.56\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.57\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.58\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.59\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.60\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.61\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.62\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.63\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.64\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.65\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.66\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\4.00\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\4.01\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\4.02\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\5.00\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\5.01\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\5.02\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\5.03\info.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\motors\inrunner_medium.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\motors\inrunner_small.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\keys_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\keys_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\keys_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\keys_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\lambda.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\lambda.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\logo.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\logo_vertical.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\logo_vertical.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="QCodeEditor\resources\languages\lua.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\main.qml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\mcconf.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\mcconf.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\minimize.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\motor.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\motor.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\motor_default.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\motor_default.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\motor_down.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\motor_down.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\motor_side.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\motor_side.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\motor_up.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\motor_up.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\multi_master.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\multi_single.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\multi_slave.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\version\neutral_v.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\version\neutral_v.svg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\version\neutral_vesc_tool.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\version\neutral_vesc_tool.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\nrf51_remote_mt_32k_32m.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\nrf51_vesc_ble_16k_16m_rx11_tx9_led3.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\nrf51_vesc_ble_16k_16m_rx1_tx2_led3.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\nrf51_vesc_ble_32k_16m_rx11_tx9_led3.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\nrf51_vesc_ble_32k_32m_rx1_tx2_led3.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\nrf51_vesc_ble_32k_32m_rx2_tx1_led3.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\nrf52832_vesc_ble_rx6_tx7_led8.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\nrf52832_vesc_ble_rx7_tx6_led8.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\nrf52840_stick_remote.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\nrf52840_stormcore_ble_rx31_tx30_led5.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\nrf52840_vesc_ble_rx11_tx8_led7.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\nrf52840_vesc_ble_rx26_tx25_led27.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\nunchuk.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\motors\outrunner_mini.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\motors\outrunner_small.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.55\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.56\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.57\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.58\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.59\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.60\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.61\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.62\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.63\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.64\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.65\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.66\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\4.00\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\4.01\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\4.02\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\5.00\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\5.01\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\5.02\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\5.03\parameters_appconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.55\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.56\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.57\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.58\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.59\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.60\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.61\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.62\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.63\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.64\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.65\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\3.66\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\4.00\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\4.01\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\4.02\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\5.00\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\5.01\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\5.02\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\config\5.03\parameters_mcconf.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\propeller.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="QCodeEditor\resources\languages\python.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="QCodeEditor\resources\qcodeeditor_resources.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="mobile\qml.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="QCodeEditor\resources\languages\qml.xml">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\qtquickcontrols2.conf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="mobile\qtquickcontrols2_dark.conf">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\rc_rx.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <QtRcc Include="res.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="res_config.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="res_fw.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="res_fw_bms.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="res_neutral.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <QtRcc Include="res_qml.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
+    <None Include="res\+theme_light\icons\rl.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\rl.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\rt_app_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\rt_app_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\rt_app_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\rt_app_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\rt_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\rt_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\rt_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\rt_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\sampl_trigger_start.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\sampl_trigger_start.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\sample_trigger_fault.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\sample_trigger_fault.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\sample_trigger_fault_nosend.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\sample_trigger_fault_nosend.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\sample_trigger_start_nosend.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\sample_trigger_start_nosend.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\size_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\size_off.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\size_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\size_on.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\slider1.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\stormcore-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\stormcore-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\v6plus_top.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\v_icon-256.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\v_icon-256.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\v_icon-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\v_icon-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\images\vedder_nunchuk.jpg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\+theme_light\icons\vesc-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icons\vesc-96.png">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares_bms\12s7p\vesc_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\firmwares_bms\18s_light\vesc_default.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\other_fw\vesc_power_switch_120.bin">
+      <Filter>Resource Files</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="android\AndroidManifest.xml">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\src\com\vedder\vesc\Utils.java">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\src\com\vedder\vesc\VForegroundService.java">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\build.gradle">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\gradle\wrapper\gradle-wrapper.jar">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\gradle\wrapper\gradle-wrapper.properties">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\gradlew.bat">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\gradlew">
+      <Filter>Distribution Files</Filter>
+    </None>
+    <None Include="android\res\values\libs.xml">
+      <Filter>Distribution Files</Filter>
+    </None>
+  </ItemGroup>
+</Project>

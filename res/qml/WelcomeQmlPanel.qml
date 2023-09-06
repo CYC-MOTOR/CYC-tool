@@ -1,14 +1,14 @@
 /*
     Copyright 2021 Benjamin Vedder	benjamin@vedder.se
 
-    This file is part of VESC Tool.
+    This file is part of EBMX Tool.
 
-    VESC Tool is free software: you can redistribute it and/or modify
+    EBMX Tool is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    VESC Tool is distributed in the hope that it will be useful,
+    EBMX Tool is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
@@ -23,7 +23,7 @@ import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
 import QtQuick.Window 2.2
 
-import Vedder.vesc.utility 1.0
+import Vedder.EBMX.utility 1.0
 
 import "qrc:/mobile"
 
@@ -38,8 +38,8 @@ Item {
     property int notchTop: 0
 
     function setupMotors() {
-        if (!VescIf.isPortConnected()) {
-            VescIf.emitMessageDialog("Setup motors FOC",
+        if (!EBMXIf.isPortConnected()) {
+            EBMXIf.emitMessageDialog("Setup motors FOC",
                                      "Not connected. Please connect in order to run the FOC wizard.",
                                      false, false)
         } else {
@@ -48,9 +48,9 @@ Item {
     }
 
     function nrfQuickPair() {
-        if (!VescIf.isPortConnected()) {
-            VescIf.emitMessageDialog("NRF Quick Pair",
-                                     "You are not connected to the VESC. Please connect in order " +
+        if (!EBMXIf.isPortConnected()) {
+            EBMXIf.emitMessageDialog("NRF Quick Pair",
+                                     "You are not connected to the EBMX. Please connect in order " +
                                      "to quick pair an NRF-based remote.", false, false)
         } else {
             nrfPairStartDialog.open()
@@ -58,9 +58,9 @@ Item {
     }
 
     function dirSetup() {
-        if (!VescIf.isPortConnected()) {
-            VescIf.emitMessageDialog("Directions",
-                                     "You are not connected to the VESC. Please connect in order " +
+        if (!EBMXIf.isPortConnected()) {
+            EBMXIf.emitMessageDialog("Directions",
+                                     "You are not connected to the EBMX. Please connect in order " +
                                      "to map directions.", false, false)
         } else {
             enabled = false
@@ -256,14 +256,14 @@ Item {
         tabBar.visible = true
         tabBar.enabled = true
 
-        if (VescIf.isPortConnected() && VescIf.qmlHwLoaded()) {
-            if (VescIf.getLastFwRxParams().qmlHwFullscreen) {
+        if (EBMXIf.isPortConnected() && EBMXIf.qmlHwLoaded()) {
+            if (EBMXIf.getLastFwRxParams().qmlHwFullscreen) {
                 swipeView.interactive = false
                 tabBar.visible = false
                 tabBar.enabled = false
             }
 
-            hwUiObj = Qt.createQmlObject(VescIf.qmlHw(), uiHw, "HwUi")
+            hwUiObj = Qt.createQmlObject(EBMXIf.qmlHw(), uiHw, "HwUi")
             uiHwButton.visible = true
             swipeView.insertItem(0, uiHwPage)
             tabBar.insertItem(0, uiHwButton)
@@ -289,14 +289,14 @@ Item {
         tabBar.visible = true
         tabBar.enabled = true
 
-        if (VescIf.isPortConnected() && VescIf.qmlAppLoaded()) {
-            if (VescIf.getLastFwRxParams().qmlAppFullscreen) {
+        if (EBMXIf.isPortConnected() && EBMXIf.qmlAppLoaded()) {
+            if (EBMXIf.getLastFwRxParams().qmlAppFullscreen) {
                 swipeView.interactive = false
                 tabBar.visible = false
                 tabBar.enabled = false
             }
 
-            appUiObj = Qt.createQmlObject(VescIf.qmlApp(), uiApp, "AppUi")
+            appUiObj = Qt.createQmlObject(EBMXIf.qmlApp(), uiApp, "AppUi")
             uiAppButton.visible = true
             swipeView.insertItem(0, uiAppPage)
             tabBar.insertItem(0, uiAppButton)
@@ -311,7 +311,7 @@ Item {
     }
 
     Connections {
-        target: VescIf
+        target: EBMXIf
 
         onFwRxChanged: {
             updateHwUi()
@@ -346,7 +346,7 @@ Item {
             anchors.fill: parent
             wrapMode: Text.WordWrap
             text:
-                "After clicking OK the VESC will be put in pairing mode for 10 seconds. Switch" +
+                "After clicking OK the EBMX will be put in pairing mode for 10 seconds. Switch" +
                 "on your remote during this time to complete the pairing process."
         }
 
@@ -380,8 +380,8 @@ Item {
             wrapMode: Text.WordWrap
             text:
                 "The hardware you are connecting to contains code that will alter the " +
-                "user interface of VESC Tool. This code has not been verified by the " +
-                "authors of VESC Tool and could contain bugs and security problems. \n\n" +
+                "user interface of EBMX Tool. This code has not been verified by the " +
+                "authors of EBMX Tool and could contain bugs and security problems. \n\n" +
                 "Do you want to load this custom user interface?"
         }
 
@@ -391,7 +391,7 @@ Item {
         }
 
         onRejected: {
-            VescIf.disconnectPort()
+            EBMXIf.disconnectPort()
         }
     }
 }

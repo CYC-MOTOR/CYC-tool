@@ -2,15 +2,15 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
-import Vedder.vesc.utility 1.0
-import Vedder.vesc.commands 1.0
+import Vedder.EBMX.utility 1.0
+import Vedder.EBMX.commands 1.0
 
 Item {
     id: mainItem
     anchors.fill: parent
     anchors.margins: 5
     
-    property Commands mCommands: VescIf.commands()
+    property Commands mCommands: EBMXIf.commands()
     property bool isRunning: false
     
     ColumnLayout {
@@ -53,9 +53,9 @@ Item {
                         
                         onClicked: {
                             // Disable brake first so that we don't feed anything back to the supply
-                            VescIf.canTmpOverride(true, canBox.realValue)
+                            EBMXIf.canTmpOverride(true, canBox.realValue)
                             mCommands.setCurrentBrake(0)
-                            VescIf.canTmpOverrideEnd()
+                            EBMXIf.canTmpOverrideEnd()
                             
                             mCommands.setCurrent(0)
                             
@@ -104,9 +104,9 @@ Item {
                         text: "Brake ON"
                         
                         onClicked: {
-                            VescIf.canTmpOverride(true, canBox.realValue)
+                            EBMXIf.canTmpOverride(true, canBox.realValue)
                             mCommands.setCurrentBrake(currentBox.realValue)
-                            VescIf.canTmpOverrideEnd()
+                            EBMXIf.canTmpOverrideEnd()
                             isRunning = true
                         }
                     }
@@ -116,9 +116,9 @@ Item {
                         text: "Brake Off"
                         
                         onClicked: {
-                            VescIf.canTmpOverride(true, canBox.realValue)
+                            EBMXIf.canTmpOverride(true, canBox.realValue)
                             mCommands.setCurrentBrake(0)
-                            VescIf.canTmpOverrideEnd()
+                            EBMXIf.canTmpOverrideEnd()
                         }
                     }
                 }
@@ -143,14 +143,14 @@ Item {
         property bool other: false
         
         onTriggered: {
-            if (VescIf.isPortConnected()) {
+            if (EBMXIf.isPortConnected()) {
                 if (other) {
-                    VescIf.canTmpOverride(true, canBox.realValue)
+                    EBMXIf.canTmpOverride(true, canBox.realValue)
                     if (isRunning) {
                         mCommands.sendAlive()
                     }
                     mCommands.getValues()
-                    VescIf.canTmpOverrideEnd()
+                    EBMXIf.canTmpOverrideEnd()
                 } else {
                     if (isRunning) {
                         mCommands.sendAlive()
@@ -171,7 +171,7 @@ Item {
         onValuesReceived: { // values, mask
             var friction = 10.0
                     
-            if (values.vesc_id == canBox.realValue) {
+            if (values.EBMX_id == canBox.realValue) {
                 valOther = values
             } else {
                 var powerDrive = values.v_in * values.current_in

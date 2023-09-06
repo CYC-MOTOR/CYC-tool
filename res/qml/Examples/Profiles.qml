@@ -1,14 +1,14 @@
 /*
     Copyright 2018 - 2021 Benjamin Vedder	benjamin@vedder.se
 
-    This file is part of VESC Tool.
+    This file is part of EBMX Tool.
 
-    VESC Tool is free software: you can redistribute it and/or modify
+    EBMX Tool is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    VESC Tool is distributed in the hope that it will be useful,
+    EBMX Tool is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
@@ -21,7 +21,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.10
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
-import Vedder.vesc.utility 1.0
+import Vedder.EBMX.utility 1.0
 
 Item {
     anchors.fill: parent
@@ -32,7 +32,7 @@ Item {
             scrollCol.children[i - 1].destroy(1)
         }
 
-        var prof = VescIf.getProfiles()
+        var prof = EBMXIf.getProfiles()
         for (i = 0;i < prof.length;i++) {
             var component = Qt.createComponent("qrc:/mobile/ProfileDisplay.qml");
             var disp = component.createObject(scrollCol, {"index": i})
@@ -49,7 +49,7 @@ Item {
 
     function handleProfileEdit(index) {
         editButtonEditor.indexNow = index
-        editButtonEditor.updateFromMcConfTemp(VescIf.getProfile(index))
+        editButtonEditor.updateFromMcConfTemp(EBMXIf.getProfile(index))
         editButtonEditor.openDialog()
     }
 
@@ -67,8 +67,8 @@ Item {
 
         onClosed: {
             if (ok) {
-                VescIf.addProfile(getMcConfTemp())
-                VescIf.storeSettings()
+                EBMXIf.addProfile(getMcConfTemp())
+                EBMXIf.storeSettings()
             }
         }
     }
@@ -79,8 +79,8 @@ Item {
 
         onClosed: {
             if (ok) {
-                VescIf.updateProfile(indexNow, getMcConfTemp())
-                VescIf.storeSettings()
+                EBMXIf.updateProfile(indexNow, getMcConfTemp())
+                EBMXIf.storeSettings()
             }
         }
     }
@@ -111,8 +111,8 @@ Item {
         }
 
         onAccepted: {
-            VescIf.deleteProfile(indexNow)
-            VescIf.storeSettings()
+            EBMXIf.deleteProfile(indexNow)
+            EBMXIf.storeSettings()
         }
     }
 
@@ -196,13 +196,13 @@ Item {
         }
 
         onAccepted: {
-            VescIf.clearProfiles()
-            VescIf.storeSettings()
+            EBMXIf.clearProfiles()
+            EBMXIf.storeSettings()
         }
     }
 
     Connections {
-        target: VescIf
+        target: EBMXIf
 
         onProfilesUpdated: {
             updateVisibleProfiles()

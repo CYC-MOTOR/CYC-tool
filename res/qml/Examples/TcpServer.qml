@@ -2,16 +2,16 @@ import QtQuick 2.5
 import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
-import Vedder.vesc.utility 1.0
-import Vedder.vesc.commands 1.0
-import Vedder.vesc.configparams 1.0
-import Vedder.vesc.tcpserversimple 1.0
+import Vedder.EBMX.utility 1.0
+import Vedder.EBMX.commands 1.0
+import Vedder.EBMX.configparams 1.0
+import Vedder.EBMX.tcpserversimple 1.0
 
 Item {
     anchors.fill: parent
     anchors.margins: 10
 
-    property Commands mCommands: VescIf.commands()
+    property Commands mCommands: EBMXIf.commands()
     
     Component.onCompleted: {
         tcp.startServer(12321)

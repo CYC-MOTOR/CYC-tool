@@ -1,14 +1,14 @@
 /*
     Copyright 2021 Benjamin Vedder	benjamin@vedder.se
 
-    This file is part of VESC Tool.
+    This file is part of EBMX Tool.
 
-    VESC Tool is free software: you can redistribute it and/or modify
+    EBMX Tool is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    VESC Tool is distributed in the hope that it will be useful,
+    EBMX Tool is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
@@ -21,7 +21,7 @@ import QtQuick 2.7
 import QtQuick.Controls 2.0
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
-import Vedder.vesc.utility 1.0
+import Vedder.EBMX.utility 1.0
 
 Item {
     // Full screen iPhone X workaround:

@@ -15,7 +15,7 @@
 * Only capture esc key for stopping the motor when connected.
 * Fixed FOC detect all no can when connected over CAN.
 * Increased motor and mosfet temperature limit editor range.
-* Mobile RT display update. See: https://github.com/vedderb/vesc_tool/pull/115
+* Mobile RT display update. See: https://github.com/vedderb/EBMX_tool/pull/115
 * Added FOC wizard, setup data and profiles from mobile UI to desktop UI.
 * Added usage page to FOC wizard.
 * Added servo output control slider.
@@ -36,13 +36,13 @@
 == 3.00 ==
 * Focus for this release: External hardware and BMS support.
  - Added hw type setting.
- - Hide VESC settings when connected to other hardware.
+ - Hide EBMX settings when connected to other hardware.
  - Added BMS commands
 * Other updates
- - Only allow uploading firmware to all VESCs when they have the same hardware version.
+ - Only allow uploading firmware to all EBMXs when they have the same hardware version.
  - Added UDP server and client.
  - Added NRF52 UICR read and write support to SWDPROG page.
- - Realtime IMU and balance data. See: https://github.com/vedderb/vesc_tool/pull/91
+ - Realtime IMU and balance data. See: https://github.com/vedderb/EBMX_tool/pull/91
  - Made CAN list resizeable.
  - Made FOC detection result dialog scrollable.
  - Added gamepad control support.
@@ -60,7 +60,7 @@
 == 2.04 ==
 * FW 5.0 support:
  - Dual motor support, for e.g. unity.
-* Added NRF pair to VESC Remote page.
+* Added NRF pair to EBMX Remote page.
 * Added detect all without CAN button.
 * Updated observer gain calculation.
 * Added support for FW test build flag.
@@ -68,9 +68,9 @@
 * Added stormcore firmwares.
 * Removed some uncommon firmwares.
 * Disable LZO FW compression if 3 consecutive chunks fail.
-* Added CAN-list with connected VESCs.
+* Added CAN-list with connected EBMXs.
 * Filter pages based on selected motor and app.
-* Log setup values in desktop VESC Tool too.
+* Log setup values in desktop EBMX Tool too.
 * Added IMU orientation calibration widget.
 
 == 2.03 ==
@@ -86,14 +86,14 @@
 * Increased maximum file size for SWD prog.
 
 == 2.01 ==
-* Upadted NRF52 firmware to support NRF remotes at the same time as VESC Tool is connected.
+* Upadted NRF52 firmware to support NRF remotes at the same time as EBMX Tool is connected.
 * Fixed swdprog bootloader paths.
 * Added option to remove experiment plot line.
 * Disconnect port after firmware upload.
 * Support for FW 4.00, which has HFI support.
 * Try regular FW chunk write if LZO write fails.
 * Use 4 ms current controller time constant by default.
-* Added TCP server to desktop VESC Tool.
+* Added TCP server to desktop EBMX Tool.
 * Added CAN analyzer page.
 
 == 2.00 ==
@@ -104,11 +104,11 @@
  - Support for reading and writing motor and app configuration in limited mode.
  - Updated _all_ configuration pages to use the grouping information, and to dynamically reload when the configuration changes.
  - Keep a record of known issues with old firmwares, and warn if a problematic firmware is in use.
- - Support for making/restoring backups of the motor and app configurations of all VESCs on the CAN Bus.
+ - Support for making/restoring backups of the motor and app configurations of all EBMXs on the CAN Bus.
 * Other updates
  - Store XML configurations with predefined parameter order instead of randomly.
  - Use OSM tile server by default as the higher resolution one is quite slow.
- - Added support for VESC 100/250.
+ - Added support for EBMX 100/250.
  - Clear arrays in settings before writing to them.
  - Sync settings at end of write.
  - Fixed temperature plot visibility boxes.
@@ -142,7 +142,7 @@
 * Disconnect BLE in destructor.
 
 == 1.25 ==
-* Renamed Nunchuk to VESC Remote.
+* Renamed Nunchuk to EBMX Remote.
 * Log analysis:
  - Improved tile caching.
  - Option to not autozoom map when zooming data.
@@ -160,10 +160,10 @@
 == 1.23 ==
 * Added more data to log analysis:
  - GNSS Accuracy.
- - Values for first VESC on CAN-bus.
+ - Values for first EBMX on CAN-bus.
  - Latitude and longitude.
  - GNSS vertical speed and accuracy.
- - Number of VESCs.
+ - Number of EBMXs.
 
 == 1.22 ==
 * Use foregroud service to keep GNSS alive during logging.
@@ -182,7 +182,7 @@
 * Added IMU data to RT log.
 * Use imperial units in profiles as well when selected.
 * Allow running in background.
-* Added wake lock when VESC is connected on Android.
+* Added wake lock when EBMX is connected on Android.
 * Added flash verification option to SWD programming.
 * Added IMU 3D view to desktop version.
 * Fixed FW upload button flickering bug.
@@ -220,9 +220,9 @@
 * Native CAN-bus support.
 * Added support for multiple SWD interfaces.
 * FW 3.59 support.
-* Added wand firmware and NRF52840 firmware for VESC HD.
+* Added wand firmware and NRF52840 firmware for EBMX HD.
 * Added header to RT CSV log.
-* Added VESC HD and UAVC Omega firmwares.
+* Added EBMX HD and UAVC Omega firmwares.
 * Added NRF quick pair button.
 * Support as many commands as possible in limited mode. This will make the app quite useful even if the FW is out of date.
 * Ble improvements for NRF52 firmwares.
@@ -280,8 +280,8 @@
 
 == 1.08 ==
 * FW 3.54 support.
-* SWD programming support, using the VESC as a programmer.
- - Can be used to flash bricked VESCs from a working one.
+* SWD programming support, using the EBMX as a programmer.
+ - Can be used to flash bricked EBMXs from a working one.
  - Can be used to make a custom NRF5x module.
 * Remember last custom firmware file path.
 
@@ -318,7 +318,7 @@
 * Clear version text on FW page when disconnected.
 
 == 1.00 ==
-* First build for VESC Tool on google play.
+* First build for EBMX Tool on google play.
 * Added direction setup to desktop version.
 * Added direction setup to QML start tools.
 
@@ -433,7 +433,7 @@
 
 == 0.82 ==
 * Only show introduction if it has changed since the previous version.
-* Proper fix for RT data time scale https://github.com/vedderb/vesc_tool/pull/5
+* Proper fix for RT data time scale https://github.com/vedderb/EBMX_tool/pull/5
 * FW 3.29 support.
 
 == 0.81 ==
@@ -477,7 +477,7 @@
 * Check motor paramters after writing them and show dialog if they were truncated.
 * FW 3.22 support.
 * UI scaling support.
-* New configuration page for VESC Tool.
+* New configuration page for EBMX Tool.
 * Updated wzards with scalable high resolution images.
 
 == 0.6 ==
@@ -487,7 +487,7 @@
 
 == 0.5 ==
 * FW 3.19 support.
-* Sampled data is now transmitted in floating point with scaling done at the VESC.
+* Sampled data is now transmitted in floating point with scaling done at the EBMX.
 * Updated setup wizard logos.
 
 == 0.4 ==
@@ -495,13 +495,13 @@
 * Autoconnect support.
 * Autoconnect buttons in welcome and connection page.
 * Autoconnect function in wizards.
-* Check for the latest VESC Tool version online.
+* Check for the latest EBMX Tool version online.
 * Poll serial port in addition to waiting for the readyRead signal since readyRead is not emitted recursively. This can be a problem when e.g. showing message boxes and data comes in.
 
 == 0.3 ==
 * FW 3.17 support.
 * Automatic build support for different versions.
-* VESC Project forum link in help menu.
+* EBMX Project forum link in help menu.
 
 == 0.2 ==
 * First complete version of input setup wizard.

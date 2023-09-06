@@ -1,14 +1,14 @@
 /*
     Copyright 2021 Benjamin Vedder	benjamin@vedder.se
 
-    This file is part of VESC Tool.
+    This file is part of EBMX Tool.
 
-    VESC Tool is free software: you can redistribute it and/or modify
+    EBMX Tool is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
     (at your option) any later version.
 
-    VESC Tool is distributed in the hope that it will be useful,
+    EBMX Tool is distributed in the hope that it will be useful,
     but WITHOUT ANY WARRANTY; without even the implied warranty of
     MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
     GNU General Public License for more details.
@@ -22,15 +22,15 @@ import QtQuick.Controls 2.2
 import QtQuick.Layouts 1.3
 import QtQuick.Controls.Material 2.2
 
-import Vedder.vesc.commands 1.0
-import Vedder.vesc.configparams 1.0
+import Vedder.EBMX.commands 1.0
+import Vedder.EBMX.configparams 1.0
 
 Item {
     anchors.fill: parent
     anchors.margins: 10
 
-    property Commands mCommands: VescIf.commands()
-    property ConfigParams mMcConf: VescIf.mcConfig()
+    property Commands mCommands: EBMXIf.commands()
+    property ConfigParams mMcConf: EBMXIf.mcConfig()
     property bool motorRunning: false
     property double posSet: 0
     
@@ -104,7 +104,7 @@ Item {
         repeat: true
         
         onTriggered: {
-            if (VescIf.isPortConnected()) {
+            if (EBMXIf.isPortConnected()) {
                 mCommands.getValues()
                 if (motorRunning) {
                     mCommands.setPos(posSet)
